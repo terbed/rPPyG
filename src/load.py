@@ -13,7 +13,7 @@ class FrameLoader(Thread):
         :param path: path to directory containing the images
         :param fmt: Extension of the images
         :param buffer: buffer list in which the images will be loaded
-        :param disp_fact: The image will be multiplied with this number before display
+        :param disp_fact: The image will be multiplied with this number before display (scale=15 or 16 if 16bit image)
         """
         Thread.__init__(self)
 
@@ -30,8 +30,7 @@ class FrameLoader(Thread):
                 rgb_img = sio.imread(frame_path)
 
                 # Convert to BGR
-                bgr_img = np.ndarray(shape=(rgb_img.shape[0], int(rgb_img.shape[1]), rgb_img.shape[2]),
-                                 dtype=rgb_img.dtype)
+                bgr_img = np.ndarray(shape=(rgb_img.shape[0], int(rgb_img.shape[1]), rgb_img.shape[2]), dtype=rgb_img.dtype)
                 bgr_img[:, :, 0] = rgb_img[:, :, 2]
                 bgr_img[:, :, 1] = rgb_img[:, :, 1]
                 bgr_img[:, :, 2] = rgb_img[:, :, 0]
