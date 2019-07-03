@@ -9,3 +9,9 @@
 \.idea/vcs\.xml
 
 \.idea/workspace\.xml
+
+*.pyc
+
+*.xml
+
+\.idea/
