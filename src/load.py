@@ -7,25 +7,46 @@ import cv2
 
 
 class FrameLoader(Thread):
-    def __init__(self, path, fmt, buffer, disp_fact=1):
+    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp_fact=1):
         """
 
-        :param path: path to directory containing the images
-        :param fmt: Extension of the images
+        :param path: path to directory containing the images WITH "/" at the end
+        :param fmt: Extension of the images e.g. fmt=".jpg"
         :param buffer: buffer list in which the images will be loaded
+        :param pre: pre term befor numbering
+        :param post: post term after numbering and before dot in fmt
+        :param starting_frame_num: the number of frame at which to start the loading
+        :param zero_padding_num: it is general to pad the numbering with zeros. e.g.: 001 -> zero_padding_num = 3
         :param disp_fact: The image will be multiplied with this number before display (scale=15 or 16 if 16bit image)
         """
         Thread.__init__(self)
 
+        self.rootpath = path
         self.buffer = buffer
         self.disp_scale = disp_fact
-        self.filenames = glob.glob(f"{path}/*.{fmt}")
-        self.filenames.sort()
+
+        self.fs = glob.glob(f"{path}/*{fmt}")
+        self.n = len(self.fs)
+
+        self.start_frame_num = starting_frame_num
+        self.preterm = pre
+        self.postterm = post
+        self.fmt = fmt
+
+        self.padding_code = "{:0>" + str(zero_padding_num) + "d}"
+        self.filenames = []
+        self.__create_pathlist()
+
+    def __create_pathlist(self):
+        for frame_num in range(self.start_frame_num, self.n):
+            self.filenames.append((self.rootpath + self.preterm + self.padding_code + self.postterm + self.fmt).format(frame_num))
+        ### DEBUG
+        print(self.filenames[10])
 
     def run(self):
         for idx, frame_path in enumerate(self.filenames):
 
-            if len(self.buffer) < 500:
+            if len(self.buffer.container) < 500:
                 start = time.time()
                 rgb_img = sio.imread(frame_path)
 
@@ -37,10 +58,11 @@ class FrameLoader(Thread):
 
                 if bgr_img.size != 0:
                     # Access the image data
-                    print(f"{idx}th frame is loaded successfully!")
+                    print(f"{idx}th frame is loaded successfully from {frame_path}")
 
                     # Load into buffer
-                    self.buffer.append(bgr_img)
+                    with self.buffer.lock:
+                        self.buffer.container.append(bgr_img)
 
                     # Preview of the video
                     cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
