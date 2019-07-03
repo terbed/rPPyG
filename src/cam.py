@@ -55,7 +55,8 @@ class Camera(Thread):
                     bgr_img[:, :, 2] = frame[:, :, 0]
 
                     # Save image to buffer
-                    self.buffer.append(bgr_img)
+                    with self.buffer.lock:
+                        self.buffer.container.append(bgr_img)
 
                     # Display video if needed
                     cv2.namedWindow('Camera video', cv2.WINDOW_AUTOSIZE)
@@ -66,7 +67,7 @@ class Camera(Thread):
 
                     running_time = (time.time() - start_t)
                     fps = 1.0 / running_time
-                    print(f"{fps}  FPS")
+                    print(f"Camera speed: {fps}  FPS")
                     #print(f"Buffer size: {len(self.buffer)}")
 
                 grab_result.Release()
