@@ -2,6 +2,8 @@ import numpy as np
 from threading import Thread
 import time
 import src.core as core
+import logging
+import cv2
 
 
 class FVP(Thread):
@@ -139,3 +141,43 @@ class FVP(Thread):
                 print(f"---> Algorithm speed: {fps}  FPS")
             else:
                 time.sleep(1)
+
+
+class RoiBased(Thread):
+    def __init__(self, buffer, frame_rate, hr_band):
+        Thread.__init__(self)
+        self.logger = logging.getLogger("RoiBased")
+        self.buffer = buffer
+        self.Fs = frame_rate
+        self.hr_band = hr_band
+
+        self.__init_logger()
+
+    def __init_logger(self):
+        # Create handlers
+        c_handler = logging.StreamHandler()
+        f_handler = logging.FileHandler('RoiBased.log', mode='w')
+        c_handler.setLevel(logging.DEBUG)
+        f_handler.setLevel(logging.DEBUG)
+
+        # Create formatters and add it to handlers
+        c_format = logging.Formatter('%(name)s | %(levelname)s | %(message)s')
+        f_format = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+        c_handler.setFormatter(c_format)
+        f_handler.setFormatter(f_format)
+
+        # Add handlers to the logger
+        self.logger.addHandler(c_handler)
+        self.logger.addHandler(f_handler)
+
+        self.logger.debug('Logger is initialized!')
+
+    @staticmethod
+    def __gaussian_blur(img):
+        """
+        Calculates and return gaussian smoothed image
+
+        :param img: the source image to be smoothed
+        :return: blurred image
+        """
+        return cv2.GaussianBlur(img, ksize=(0, 0), sigmaX=5)
