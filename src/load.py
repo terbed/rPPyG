@@ -7,7 +7,7 @@ import cv2
 
 
 class FrameLoader(Thread):
-    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp_fact=1):
+    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False , disp_fact=1):
         """
 
         :param path: path to directory containing the images WITH "/" at the end
@@ -24,6 +24,7 @@ class FrameLoader(Thread):
         self.rootpath = path
         self.buffer = buffer
         self.disp_scale = disp_fact
+        self.disp = disp
 
         self.fs = glob.glob(f"{path}/*{fmt}")
         self.n = len(self.fs)
@@ -64,10 +65,11 @@ class FrameLoader(Thread):
                     with self.buffer.lock:
                         self.buffer.container.append(bgr_img)
 
-                    # Preview of the video
-                    cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
-                    cv2.imshow('Loaded image', bgr_img * self.disp_scale)
-                    cv2.waitKey(1)
+                    if self.disp:
+                        # Preview of the video
+                        cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
+                        cv2.imshow('Loaded image', bgr_img * self.disp_scale)
+                        cv2.waitKey(1)
                 else:
                     print("ERROR!!! The loaded image is empty!")
                     break
@@ -77,3 +79,52 @@ class FrameLoader(Thread):
             else:
                 # Terminate loading thread for 5 sec if lots of data in buffer
                 time.sleep(5)
+
+
+class VideoLoader(Thread):
+    def __init__(self, buffer, full_path, disp):
+        """
+        Load frames from video extension
+
+        :param buffer: the video container where frames will be loaded
+        :param full_path: full path to video
+        :param disp: Display loaded frame
+        """
+        Thread.__init__(self)
+        self.full_path = full_path
+        self.buffer = buffer
+        self.disp = disp
+
+    def run(self):
+        # Create a VideoCapture object and read from input file
+        # If the input is the camera, pass 0 instead of the video file name
+        cap = cv2.VideoCapture(self.full_path)
+
+        # Check if camera opened successfully
+        if cap.isOpened() is False:
+            print("Error opening video stream or file")
+
+        # Read until video is completed
+        while cap.isOpened():
+            # Capture frame-by-frame
+            ret, frame = cap.read()
+            if ret is True:
+                # load into buffer
+                self.buffer.container.append(frame)
+
+                if self.disp:
+                    # Display the resulting frame
+                    cv2.imshow('Frame', frame)
+
+                    # Press Q on keyboard to  exit
+                    if cv2.waitKey(25) & 0xFF == ord('q'):
+                        break
+            # Break the loop
+            else:
+                break
+
+        # When everything done, release the video capture object
+        cap.release()
+
+        # Closes all the frames
+        cv2.destroyAllWindows()

@@ -144,14 +144,22 @@ class FVP(Thread):
 
 
 class RoiBased(Thread):
-    def __init__(self, buffer, frame_rate, hr_band):
+    def __init__(self, buffer, frame_rate=20, hr_band=(40/60., 240/60.), width=500, height=500, patch_size=25):
         Thread.__init__(self)
         self.logger = logging.getLogger("RoiBased")
         self.buffer = buffer
         self.Fs = frame_rate
         self.hr_band = hr_band
 
+        self.patch_size = patch_size
+        self.w = width
+        self.h = height
+        self.rows = int(self.h / self.patch_size)
+        self.cols = int(self.w / self.patch_size)
+        self.subregs = self.rows * self.cols
+
         self.__init_logger()
+        self.logger.info(f"Number of subregions: {self.subregs}")
 
     def __init_logger(self):
         # Create handlers
@@ -181,3 +189,21 @@ class RoiBased(Thread):
         :return: blurred image
         """
         return cv2.GaussianBlur(img, ksize=(0, 0), sigmaX=5)
+
+    def __downscale_image(self, img):
+        """
+        Averages subregions
+
+        :param img: the source image to be downscaled
+        :return: the sub-regions in rows with 3 color channel columns (shape: sub-regions x color channels)
+        """
+
+        Id = np.empty(shape=(self.rows, self.cols, 3), dtype=np.float)
+        for i in range(self.rows):
+            for j in range(self.cols):
+                Id[i, j, :] = np.mean(img[i * self.patch_size:i * self.patch_size + self.patch_size - 1,
+                                          j * self.patch_size:j * self.patch_size + self.patch_size - 1, :], axis=(0, 1))
+
+        Id = np.reshape(Id, (Id.shape[0] * Id.shape[1], 3))
+
+        return Id

@@ -7,10 +7,11 @@ import cv2
 
 
 class Camera(Thread):
-    def __init__(self, buffer):
+    def __init__(self, buffer, disp=False):
         Thread.__init__(self)
 
         self.buffer = buffer
+        self.disp = disp
         # self.img_width = img_width
         # self.img_height = img_height
         self.camera = pylon.InstantCamera(pylon.TlFactory.GetInstance().CreateFirstDevice())
@@ -38,7 +39,7 @@ class Camera(Thread):
             # converting to opencv bgr format
             converter.OutputPixelFormat = pylon.PixelType_RGB16packed
             converter.OutputBitAlignment = pylon.OutputBitAlignment_LsbAligned
-            bgr_img = frame = np.ndarray(shape=(self.camera.Height.Value, self.camera.Width.Value, 3), dtype=np.uint16)
+            #bgr_img = frame = np.ndarray(shape=(self.camera.Height.Value, self.camera.Width.Value, 3), dtype=np.uint16)
 
             while self.camera.IsGrabbing():
                 start_t = time.time()
@@ -50,20 +51,22 @@ class Camera(Thread):
                     image = converter.Convert(grab_result)
                     frame = np.ndarray(buffer=image.GetBuffer(), shape=(image.GetHeight(), image.GetWidth(), 3),
                                        dtype=np.uint16)
-                    bgr_img[:, :, 0] = frame[:, :, 2]
-                    bgr_img[:, :, 1] = frame[:, :, 1]
-                    bgr_img[:, :, 2] = frame[:, :, 0]
+                    # frame[:, :, 0] = frame[:, :, 2]
+                    # frame[:, :, 1] = frame[:, :, 1]
+                    # frame[:, :, 2] = frame[:, :, 0]
 
                     # Save image to buffer
                     with self.buffer.lock:
-                        self.buffer.container.append(bgr_img)
+                        self.buffer.container.append(frame)
+                        print(f"Buffer size: {len(self.buffer.container)}")
 
-                    # Display video if needed
-                    cv2.namedWindow('Camera video', cv2.WINDOW_AUTOSIZE)
-                    cv2.imshow('Camera video', bgr_img * 16)
-                    k = cv2.waitKey(1)
-                    if k == 27:
-                        break
+                    if self.disp:
+                        # Display video if needed
+                        cv2.namedWindow('Camera video', cv2.WINDOW_AUTOSIZE)
+                        cv2.imshow('Camera video', frame*16)
+                        k = cv2.waitKey(1)
+                        if k == 27:
+                            break
 
                     running_time = (time.time() - start_t)
                     fps = 1.0 / running_time
