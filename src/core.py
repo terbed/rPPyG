@@ -69,9 +69,9 @@ def pos(C, order):
     General Blood volume pulse vector algorithm
 
     :param C: signal attained after averaging a patch of pixels for each frame.
-              its shape is [frame, weight_mask_stat, color_channel]
+              its shape is [frame, sub-region, color_channel]
     :param order: list of channel order based on pulsatile amplitude strength (decreasing order)
-    :returns: P: The pulse signal for each weight. shape -> [time, weight_mask]
+    :returns: P: The pulse signal for each weight. shape -> [frame, weight_mask]
     :returns: Z: The intensity (energy) of the signal
     """
 
@@ -90,7 +90,14 @@ def pos(C, order):
     # Calculate the intensity signal to supress noise
     Z = C[:, :, 0] + C[:, :, 1] + C[:, :, 2]
 
-    return np.divide(np.subtract(P, np.mean(P, axis=0)), np.std(P, axis=0)), np.divide(np.subtract(Z, np.mean(Z, axis=0)), np.std(Z, axis=0))
+    # norm and zero mean signals
+    P = np.subtract(P, np.mean(P, axis=0))
+    P = np.divide(P, np.std(P, axis=0))
+
+    Z = np.subtract(Z, np.mean(Z, axis=0))
+    Z = np.divide(Z, np.std(Z, axis=0))
+
+    return P, Z
 
 
 def cdf_sb_pos(C, order, B):
@@ -218,6 +225,26 @@ def pbv(raw_signal):
     pass
 
 
+def windowing_on_cols(src: np.ndarray, type="hanning") -> np.ndarray:
+    """
+    Apply selected window on array's given axis
+
+    :param src: array on which hanning will be applied
+    :param type: "hanning" for hanning or "hamming" for hamming window
+    :param axis: axis on which to apply window
+    :return: the windowed array
+    """
+    l = src.shape[0]
+    if type == "hamming":
+        w = np.hamming(l)
+    else:
+        w = np.hanning(l)
+
+    out = np.multiply(src.transpose(), w)
+
+    return np.transpose(out)
+
+
 # --------------------------------------------- Signal Comb & Plot ----------------------------------------------------
 def signal_combination(Ptn, Ztn, L2, B, f):
     """
@@ -235,6 +262,11 @@ def signal_combination(Ptn, Ztn, L2, B, f):
     Ptn = np.divide(np.subtract(Ptn, np.mean(Ptn, axis=0)), np.std(Ptn, axis=0))
     Ztn = np.divide(np.subtract(Ztn, np.mean(Ztn, axis=0)), np.std(Ztn, axis=0))
 
+    # Windowing segments for DFT
+    Ptn = windowing_on_cols(Ptn)
+    Ztn = windowing_on_cols(Ztn)
+
+    # calculate Fourier
     Fp = np.fft.fft(np.array(np.transpose(Ptn))) / L2
     Fz = np.fft.fft(np.array(np.transpose(Ztn))) / L2
 
@@ -263,7 +295,15 @@ def signal_combination(Ptn, Ztn, L2, B, f):
     # Calculate quality measure
     hfq_raw = hfq_raw*hfq_raw.conjugate()
     hfq_raw = hfq_raw.real
-    avrg_noise_pow = (np.average(hfq_raw[0:hr_idx]) + np.average(hfq_raw[hr_idx+1:]))/2
-    q_meas = 10*np.log10(hfq_raw[hr_idx]/avrg_noise_pow)
+
+    # Calculate peak energy allow 5 bin variation
+    around_peak = np.sum(np.square(hfq_raw[hr_idx-3:hr_idx+2]))
+    # Add also the first harmonic energy if available (10 bin)
+    around_peak += np.sum(np.square(hfq_raw[hr_idx*2-6:hr_idx*2+5]))
+
+    # calculate the other parts energy
+    avrg_noise_pow = np.sum(np.square(hfq_raw[:hr_idx-4])) + np.sum(np.square(hfq_raw[hr_idx+3:hr_idx*2-7])) \
+                                                           + np.sum(np.square(hfq_raw[hr_idx*2+6:]))
+    q_meas = 10*np.log10(around_peak/avrg_noise_pow)
 
     return h, h_raw, hr_est, q_meas

@@ -61,7 +61,7 @@ class RoiTracker(Thread):
             time.sleep(1)
             # select by hand
             if len(self.buffer.container) > 0:
-                ROI = cv2.selectROI("Frame", self.buffer.container[0]*16, fromCenter=False, showCrosshair=True)
+                ROI = cv2.selectROI("Frame", self.buffer.container[0], fromCenter=False, showCrosshair=True)
                 print(f"ROI: {ROI}")
 
                 self.tracker.init(np.uint8(self.buffer.container[0]), ROI)
@@ -82,7 +82,7 @@ class RoiTracker(Thread):
                         cv2.rectangle(self.buffer.container[0], (x, y), (x + w, y + h), (0, 255, 0), 2)
 
                     # show the output frame
-                    cv2.imshow("Frame", self.buffer.container[0]*16)
+                    cv2.imshow("Frame", self.buffer.container[0])
                     key = cv2.waitKey(1) & 0xFF
 
                 del self.buffer.container[0]

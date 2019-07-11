@@ -7,7 +7,7 @@ import cv2
 
 
 class FrameLoader(Thread):
-    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False , disp_fact=1):
+    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False, disp_fact=1):
         """
 
         :param path: path to directory containing the images WITH "/" at the end

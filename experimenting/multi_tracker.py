@@ -67,7 +67,7 @@ while True:
 print('Selected bounding boxes {}'.format(bboxes))
 
 # Specify the tracker type
-tracker_type = "KCF"
+tracker_type = "MOSSE"
 
 # Create MultiTracker object
 multiTracker = cv2.MultiTracker_create()

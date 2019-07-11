@@ -1,14 +1,14 @@
 from pypylon import pylon
 from pypylon import genicam
-from threading import Thread
+from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex
 import numpy as np
 import time
 import cv2
 
 
-class Camera(Thread):
+class Camera(QThread):
     def __init__(self, buffer, disp=False):
-        Thread.__init__(self)
+        QThread.__init__(self)
 
         self.buffer = buffer
         self.disp = disp
@@ -78,3 +78,38 @@ class Camera(Thread):
         except genicam.GenericException as e:
             print("ERROR! An exception occurred.")
             print(str(e))
+
+
+class BuiltinCam(QThread):
+    def __init__(self, buffer, disp=False):
+        QThread.__init__(self)
+
+        self.buffer = buffer
+        self.disp = disp
+
+        self.cap = cv2.VideoCapture(0)
+        self.cap.set(cv2.CAP_PROP_FPS, 20)
+        print(f"Built in Camera FPS: {self.cap.get(cv2.CAP_PROP_FPS)}")
+        print(f"Width: {self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)}")
+        print(f"Width: {self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)}")
+
+    def __del__(self):
+        # When everything done, release the capture
+        self.cap.release()
+        cv2.destroyAllWindows()
+
+    def run(self):
+        while (True):
+            start = time.time()
+            # Capture frame-by-frame
+            ret, frame = self.cap.read()
+
+            self.buffer.container.append(np.copy(frame))
+
+            if self.disp:
+                # Display the resulting frame
+                cv2.imshow('frame', frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
+
+            print(f"camera fps: {1. / (time.time() - start)}")

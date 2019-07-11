@@ -55,7 +55,11 @@ class FVP(Thread):
         H = np.zeros(shape=(1, L2), dtype=np.double)
         H_RAW = np.zeros(shape=(1, L2), dtype=np.double)
 
+        # Final pulse signal container
+        pulse_signal = np.zeros(shape=(1, L2-1), dtype=np.double)
+
         shift_idx = 0
+        sliding_idx = 0
         heart_rates = []
         quality_measures = []
         final_HRs = []
@@ -116,10 +120,13 @@ class FVP(Thread):
                     H_RAW = np.delete(H_RAW, 0, 0)
                     H = np.append(H, 0.)
                     H_RAW = np.append(H_RAW, 0.)
+                    pulse_signal = np.append(pulse_signal, 0.)
 
                     # overlap add
                     H = H + h
                     H_RAW = H_RAW + h_raw
+                    pulse_signal[sliding_idx:] = pulse_signal[sliding_idx:] + h
+                    sliding_idx += 1
 
                     # overlap average
                     H[0:L2 - 1] = H[0:L2 - 1] / 2
@@ -135,6 +142,7 @@ class FVP(Thread):
                     quality_measures = []
                     
                     print(f"----------------------------------------> Estimated HR: {estimated_HR}")
+                    np.savetxt("pulse_signal.txt", pulse_signal)
 
                 running_time = (time.time() - start_time)
                 fps = 1.0 / running_time
@@ -143,7 +151,7 @@ class FVP(Thread):
                 time.sleep(1)
 
 
-class RoiBased(Thread):
+class Hybrid(Thread):
     def __init__(self, buffer, frame_rate=20, hr_band=(40/60., 240/60.), width=500, height=500, patch_size=25):
         Thread.__init__(self)
         self.logger = logging.getLogger("RoiBased")
