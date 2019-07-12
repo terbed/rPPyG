@@ -64,7 +64,7 @@ def fvp(frame, patch_size, K):
 
 
 # -------------------------------------------- POS -------------------------------------------------------------------
-def pos(C, order):
+def pos(C, order=(1, 0, 2)):
     """
     General Blood volume pulse vector algorithm
 

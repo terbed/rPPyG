@@ -66,7 +66,6 @@ class Rppg(QThread):
         self.num_of_calls = 0
 
         self.mtx = QMutex()
-        self.mtx = QMutex()
 
     @pyqtSlot(np.ndarray)
     def on_new_frame(self, src: np.ndarray):

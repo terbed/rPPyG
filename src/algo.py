@@ -4,161 +4,26 @@ import time
 import src.core as core
 import logging
 import cv2
+from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex
 
 
-class FVP(Thread):
-    def __init__(self, buffer, frame_rate, hr_band, L1, L2):
-        Thread.__init__(self)
-        self.is_running = True
-        self.buffer = buffer
-        self.frame_rate = frame_rate
-        self.hr_band = hr_band
-        self.L1 = L1
-        self.L2 = L2
+class Hybrid(QThread):
+    """
+    Hybrid solution for minimal motion cases. Rigid rPPG estimation and simultaneously ROI tracking. In case of motion
+    the tracked ROI is used for signal extraction, otherwise the more accurate rigid rPPG
+    """
+    def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
+        QThread.__init__(self)
+        self.current_frame = None
+        self.buffer = []
+        self.mtx = QMutex()
 
-    def run(self):
-        # Initialize FVP method
-        K = 6  # number of top ranked eigenvectors
-        patch_size = 25
-        L1 = self.L1
-        u0 = 1
-        L2 = self.L2  # window length in frame
-
-        l1 = float(L1) / self.frame_rate
-        Fb1 = 1. / l1
-        l2 = float(L2) / self.frame_rate  # window length in seconds
-        Fb2 = 1. / l2
-
-        f1 = np.linspace(0, (L1 - 1) * Fb1, L1, dtype=np.double)  # frequency bin in Hz
-        f2 = np.linspace(0, (L2 - 1) * Fb2, L2, dtype=np.double)  # frequency vector in Hz
-        t = np.linspace(0, (L2 - 1) * 1. / self.frame_rate, L2)
-        t = t.reshape((1, len(t)))
-        hr_min_idx1 = np.argmin(np.abs(f1 - self.hr_band[0]))
-        hr_max_idx1 = np.argmin(np.abs(f1 - self.hr_band[1]))
-        B1 = [hr_min_idx1, hr_max_idx1]  # HR range ~ [50, 220] bpm
-
-        hr_min_idx2 = np.argmin(np.abs(f2 - self.hr_band[0]))
-        hr_max_idx2 = np.argmin(np.abs(f2 - self.hr_band[1]))
-        B2 = [hr_min_idx2, hr_max_idx2]
-
-        # Channel ordering for BGR
-        # The largest pulsatile strength is in G then B then R
-        channel_ordering = [1, 0, 2]
-
-        Jt = []
-
-        add_row = np.zeros(shape=(1, K * 4), dtype=np.double)
-        Pt = np.zeros(shape=(L2, K * 4), dtype=np.double)
-        Zt = np.zeros(shape=(L2, K * 4), dtype=np.double)
-
-        # Container for the overlap-added signal
-        H = np.zeros(shape=(1, L2), dtype=np.double)
-        H_RAW = np.zeros(shape=(1, L2), dtype=np.double)
-
-        # Final pulse signal container
-        pulse_signal = np.zeros(shape=(1, L2-1), dtype=np.double)
-
-        shift_idx = 0
-        sliding_idx = 0
-        heart_rates = []
-        quality_measures = []
-        final_HRs = []
-        final_QMs = []
-        timestamp_nums = []
-        first_run = True
-
-        while self.is_running:
-            print(f"--------------------> Buffer size: {len(self.buffer.container)}")
-            if len(self.buffer.container) > 0:
-                start_time = time.time()
-                # ----------------------------------------------------------------- Image processing with FVP algorithm
-                with self.buffer.lock:
-                    Jt.append(core.fvp(self.buffer.container[0], patch_size, K))
-                    del self.buffer.container[0]
-                
-                # Extract the PPG signal
-                if len(Jt) == L1:
-                    C = np.array(Jt)
-                    del Jt[0]  # delete the first element
-
-                    # --------------------------------------------------------------------- Pulse extraction algorithm
-                    P, Z = core.pos(C, channel_ordering)
-
-                    if shift_idx + L1 - 1 < L2:
-                        Pt[shift_idx:shift_idx + L1, :] = Pt[shift_idx:shift_idx + L1, :] + P
-                        Zt[shift_idx:shift_idx + L1, :] = Zt[shift_idx:shift_idx + L1, :] + Z
-
-                        # average add, not overlap add
-                        Pt[shift_idx:shift_idx + L1 - 1, :] = Pt[shift_idx:shift_idx + L1 - 1, :] / 2
-                        Zt[shift_idx:shift_idx + L1 - 1, :] = Zt[shift_idx:shift_idx + L1 - 1, :] / 2
-
-                        shift_idx = shift_idx + 1
-                    else:  # In this case the L2 length is fully loaded, we have to remove the first element and add a new one at the end
-                        # overlap add result
-                        Pt = np.delete(Pt, 0, 0)  # delete first row (last frame)
-                        Pt = np.append(Pt, add_row, 0)  # append zeros for the new frame point
-
-                        Zt = np.delete(Zt, 0, 0)  # delete first row (last frame)
-                        Zt = np.append(Zt, add_row, 0)  # append zeros for the new frame point
-
-                        Pt[shift_idx - 1:shift_idx + L1 - 1, :] = Pt[shift_idx - 1:shift_idx + L1 - 1, :] + P
-                        Zt[shift_idx - 1:shift_idx + L1 - 1, :] = Zt[shift_idx - 1:shift_idx + L1 - 1, :] + Z
-
-                        # overlap average
-                        Pt[shift_idx - 1:shift_idx + L1 - 2, :] = Pt[shift_idx - 1:shift_idx + L1 - 2, :] / 2
-                        Zt[shift_idx - 1:shift_idx + L1 - 2, :] = Zt[shift_idx - 1:shift_idx + L1 - 2, :] / 2
-
-                        computing = True
-
-                if shift_idx == L2 - L1 + 1:
-                    # now we can also calculate fourier and signal combination
-                    h, h_raw, hr_est, q_meas = core.signal_combination(Pt, Zt, L2, B2, f2)
-                    heart_rates.append(hr_est)
-                    quality_measures.append(q_meas)
-
-                    H = np.delete(H, 0, 0)
-                    H_RAW = np.delete(H_RAW, 0, 0)
-                    H = np.append(H, 0.)
-                    H_RAW = np.append(H_RAW, 0.)
-                    pulse_signal = np.append(pulse_signal, 0.)
-
-                    # overlap add
-                    H = H + h
-                    H_RAW = H_RAW + h_raw
-                    pulse_signal[sliding_idx:] = pulse_signal[sliding_idx:] + h
-                    sliding_idx += 1
-
-                    # overlap average
-                    H[0:L2 - 1] = H[0:L2 - 1] / 2
-                    H_RAW[0:L2 - 1] = H_RAW[0:L2 - 1] / 2
-
-                if len(heart_rates) == self.frame_rate * 1:
-                    # Display HR estimate and signals
-                    best_idx = np.argmax(quality_measures)
-                    estimated_HR = heart_rates[best_idx]
-                    final_HRs.append(estimated_HR)
-                    final_QMs.append(quality_measures[best_idx])
-                    heart_rates = []
-                    quality_measures = []
-                    
-                    print(f"----------------------------------------> Estimated HR: {estimated_HR}")
-                    np.savetxt("pulse_signal.txt", pulse_signal)
-
-                running_time = (time.time() - start_time)
-                fps = 1.0 / running_time
-                print(f"---> Algorithm speed: {fps}  FPS")
-            else:
-                time.sleep(1)
-
-
-class Hybrid(Thread):
-    def __init__(self, buffer, frame_rate=20, hr_band=(40/60., 240/60.), width=500, height=500, patch_size=25):
-        Thread.__init__(self)
-        self.logger = logging.getLogger("RoiBased")
-        self.buffer = buffer
         self.Fs = frame_rate
+        self.L1 = l1
+        self.L2 = l2
         self.hr_band = hr_band
 
+        # Init down-sampling
         self.patch_size = patch_size
         self.w = width
         self.h = height
@@ -166,19 +31,28 @@ class Hybrid(Thread):
         self.cols = int(self.w / self.patch_size)
         self.subregs = self.rows * self.cols
 
+        # algo variables/ containers
+        self.Id_t = []
+        self.zero_row = np.zeros(shape=(1, self.subregs), dtype=np.double)
+        self.Pt = np.zeros(shape=(self.L2, self.subregs), dtype=np.double)
+        self.Zt = np.zeros(shape=(self.L2, self.subregs), dtype=np.double)
+        self.shift_idx = 0
+        self.counter = frame_rate*2
+
+        self.logger = logging.getLogger("Hybrid")
         self.__init_logger()
         self.logger.info(f"Number of subregions: {self.subregs}")
 
     def __init_logger(self):
         # Create handlers
         c_handler = logging.StreamHandler()
-        f_handler = logging.FileHandler('RoiBased.log', mode='w')
+        f_handler = logging.FileHandler('run.log', mode='a')
         c_handler.setLevel(logging.DEBUG)
         f_handler.setLevel(logging.DEBUG)
 
         # Create formatters and add it to handlers
         c_format = logging.Formatter('%(name)s | %(levelname)s | %(message)s')
-        f_format = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+        f_format = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
         c_handler.setFormatter(c_format)
         f_handler.setFormatter(f_format)
 
@@ -189,7 +63,7 @@ class Hybrid(Thread):
         self.logger.debug('Logger is initialized!')
 
     @staticmethod
-    def __gaussian_blur(img):
+    def __gaussian_blur(img: np.ndarray) -> np.ndarray:
         """
         Calculates and return gaussian smoothed image
 
@@ -198,7 +72,7 @@ class Hybrid(Thread):
         """
         return cv2.GaussianBlur(img, ksize=(0, 0), sigmaX=5)
 
-    def __downscale_image(self, img):
+    def __downscale_image(self, img: np.ndarray) -> np.ndarray:
         """
         Averages subregions
 
@@ -215,3 +89,72 @@ class Hybrid(Thread):
         Id = np.reshape(Id, (Id.shape[0] * Id.shape[1], 3))
 
         return Id
+
+    @pyqtSlot(np.ndarray)
+    def on_new_frame(self, src: np.ndarray):
+        self.logger.debug("Rppg thread got frame signal!")   # TODO: remove this part, only for debugging
+
+        self.mtx.lock()
+        self.buffer.append(src.copy())
+        self.mtx.unlock()
+
+        self.start()
+
+    def run(self):
+        while len(self.buffer) != 0:
+            # 1) ---> Down-sample image and append to container list
+            self.mtx.lock()
+            self.Id_t.append(self.__downscale_image(self.__gaussian_blur(self.buffer[0])))
+            self.mtx.unlock()
+
+            # Remove processed frame from buffer
+            del self.buffer[0]
+            self.logger.info(f"Buffer size: {len(self.buffer)}")
+
+            # 2) ---> Extract the PPG signal
+            if len(self.Id_t) == self.L1:
+                C = np.array(self.Id_t)
+                del self.Id_t[0]
+
+                # Pulse extraction algorithm
+                P, Z = core.pos(C)
+
+                if self.shift_idx + self.L1 <= self.L2:                     # L2 length is not reached yet
+                    # Fill @param self.Pt with calculated P
+                    self.__fill_add(P, Z)
+                else:                                                       # In this case the L2 length is fully loaded
+                    # Chuck the first part and extend with new data
+                    self.__chuck_add(P, Z)
+
+                    # 3) ---> Calculate similarity matrix and combine signals every 2 second
+                    if self.counter == self.Fs*2:
+                        self.logger.debug("Calculating similarity matrix and combining pulse signals...")
+                        self.counter = 0
+
+                        # TODO: implement pruning, similarity matrix and stuff
+
+                    self.counter += 1
+
+    def __chuck_add(self, P, Z):
+        n = self.shift_idx - 1
+        # delete first row (last frame)
+        self.Pt = np.delete(self.Pt, 0, 0)
+        self.Zt = np.delete(self.Zt, 0, 0)
+        # append zeros for the new frame point
+        self.Pt = np.append(self.Pt, self.zero_row, 0)
+        self.Zt = np.append(self.Zt, self.zero_row, 0)
+        # overlap add result
+        self.Pt[n:n + self.L1, :] = self.Pt[n:n + self.L1, :] + P
+        self.Zt[n:n + self.L1, :] = self.Zt[n:n + self.L1, :] + Z
+
+    def __fill_add(self, P, Z):
+        """
+        Fills L2 with calculated pulse segments
+
+        :param P: shape: (pulse_sig, subregions)
+        :param Z: shape: (intensity_sig, subregions)
+        :return: Fills L2
+        """
+        self.Pt[self.shift_idx:self.shift_idx + self.L1, :] = self.Pt[self.shift_idx:self.shift_idx + self.L1, :] + P
+        self.Zt[self.shift_idx:self.shift_idx + self.L1, :] = self.Zt[self.shift_idx:self.shift_idx + self.L1, :] + Z
+        self.shift_idx = self.shift_idx + 1
