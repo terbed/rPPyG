@@ -232,7 +232,7 @@ def windowing_on_cols(src: np.ndarray, type="hanning") -> np.ndarray:
     :param src: array on which hanning will be applied
     :param type: "hanning" for hanning or "hamming" for hamming window
     :param axis: axis on which to apply window
-    :return: the windowed array
+    :return: the windowed TRANSPOSED array
     """
     l = src.shape[0]
     if type == "hamming":
@@ -242,7 +242,7 @@ def windowing_on_cols(src: np.ndarray, type="hanning") -> np.ndarray:
 
     out = np.multiply(src.transpose(), w)
 
-    return np.transpose(out)
+    return out
 
 
 # --------------------------------------------- Signal Comb & Plot ----------------------------------------------------
@@ -267,8 +267,8 @@ def signal_combination(Ptn, Ztn, L2, B, f):
     Ztn = windowing_on_cols(Ztn)
 
     # calculate Fourier
-    Fp = np.fft.fft(np.array(np.transpose(Ptn))) / L2
-    Fz = np.fft.fft(np.array(np.transpose(Ztn))) / L2
+    Fp = np.fft.fft(Ptn) / L2
+    Fz = np.fft.fft(Ztn) / L2
 
     W = np.divide(np.abs(np.multiply(Fp, np.conj(Fp))), 1 + np.abs(np.multiply(Fz, np.conj(Fz))))       # Note: No need for abs...
 
@@ -307,3 +307,39 @@ def signal_combination(Ptn, Ztn, L2, B, f):
     q_meas = 10*np.log10(around_peak/avrg_noise_pow)
 
     return h, h_raw, hr_est, q_meas
+
+
+def snr_binary_template(n: int, max_idx: int) -> np.ndarray:
+    """
+    Return binary template for SNR calculation
+
+    :param n: number of samples
+    :param max_idx: index of the maximum value
+    :return: binary template with shape: (1, n)
+    """
+
+    out = np.zeros(shape=(1, n))
+
+    # maximum
+    out[0, max_idx-1:max_idx+1+1] = 1
+
+    # first harmonic
+    if max_idx*2+2 < n-1:
+        out[0, max_idx*2-2:max_idx*2+2+1] = 1
+
+    return out
+
+
+def calc_snr(normed_spec: np.ndarray, template: np.ndarray) -> np.float:
+    """
+    Calculates the SNR of the signal
+    :param normed_spec: the normed spectrum of the signal
+    :param template: the binary template for the signal (where is our signal in the spectrum)
+    :return: the snr value (dB)
+    """
+    return np.sum(np.square(np.multiply(template, normed_spec))) / np.sum(np.square(np.multiply(1-template, normed_spec)))
+
+
+if __name__ == "__main__":
+    y = snr_binary_template(256, 50)
+    print(1-y)

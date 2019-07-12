@@ -19,29 +19,42 @@ class Hybrid(QThread):
         self.mtx = QMutex()
 
         self.Fs = frame_rate
+        self.T = 1./frame_rate
         self.L1 = l1
         self.L2 = l2
+        self.Len = l2*self.T
+        self.Fb = 1/self.Len
+
         self.hr_band = hr_band
+        self.t = np.linspace(0, (l2-1)*self.T, l2)
+        self.f = np.linspace(0, self.Fs/2., int(l2/2)+1)
+        self.hr_min_idx = np.argmin(np.abs(self.f - self.hr_band[0]))
+        self.hr_max_idx = np.argmin(np.abs(self.f - self.hr_band[1]))
+        self.pulse_template = np.zeros(shape=self.f.shape)
+        self.pulse_template[self.hr_min_idx:self.hr_max_idx+1] = 1
 
         # Init down-sampling
         self.patch_size = patch_size
         self.w = width
         self.h = height
-        self.rows = int(self.h / self.patch_size)
-        self.cols = int(self.w / self.patch_size)
-        self.subregs = self.rows * self.cols
+        self.n_rows = int(self.h / self.patch_size)
+        self.n_cols = int(self.w / self.patch_size)
+        self.n_color = 3
+        self.n_subregs = self.n_rows * self.n_cols
 
         # algo variables/ containers
         self.Id_t = []
-        self.zero_row = np.zeros(shape=(1, self.subregs), dtype=np.double)
-        self.Pt = np.zeros(shape=(self.L2, self.subregs), dtype=np.double)
-        self.Zt = np.zeros(shape=(self.L2, self.subregs), dtype=np.double)
+        self.zero_row = np.zeros(shape=(1, self.n_subregs), dtype=np.double)
+        self.Pt = np.zeros(shape=(self.L2, self.n_subregs), dtype=np.double)
+        self.Zt = np.zeros(shape=(self.L2, self.n_subregs), dtype=np.double)
         self.shift_idx = 0
         self.counter = frame_rate*2
 
+        # logger for the class
         self.logger = logging.getLogger("Hybrid")
         self.__init_logger()
-        self.logger.info(f"Number of subregions: {self.subregs}")
+        self.logger.info(f"Number of subregions: {self.n_subregs}\nFrame rate: {self.Fs} Hz\n"
+                         f"Freq. bin: {self.Fb*60} BPM\nWindow length: {self.Len} sec")
 
     def __init_logger(self):
         # Create handlers
@@ -80,13 +93,13 @@ class Hybrid(QThread):
         :return: the sub-regions in rows with 3 color channel columns (shape: sub-regions x color channels)
         """
 
-        Id = np.empty(shape=(self.rows, self.cols, 3), dtype=np.float)
-        for i in range(self.rows):
-            for j in range(self.cols):
+        Id = np.empty(shape=(self.n_rows, self.n_cols, self.n_color), dtype=np.float)
+        for i in range(self.n_rows):
+            for j in range(self.n_cols):
                 Id[i, j, :] = np.mean(img[i * self.patch_size:i * self.patch_size + self.patch_size - 1,
                                           j * self.patch_size:j * self.patch_size + self.patch_size - 1, :], axis=(0, 1))
 
-        Id = np.reshape(Id, (Id.shape[0] * Id.shape[1], 3))
+        Id = np.reshape(Id, (self.n_subregs, self.n_color))
 
         return Id
 
@@ -123,7 +136,7 @@ class Hybrid(QThread):
                     # Fill @param self.Pt with calculated P
                     self.__fill_add(P, Z)
                 else:                                                       # In this case the L2 length is fully loaded
-                    # Chuck the first part and extend with new data
+                    # Chuck the beginning and extend with new data
                     self.__chuck_add(P, Z)
 
                     # 3) ---> Calculate similarity matrix and combine signals every 2 second
@@ -132,6 +145,7 @@ class Hybrid(QThread):
                         self.counter = 0
 
                         # TODO: implement pruning, similarity matrix and stuff
+                        self.__pruning()
 
                     self.counter += 1
 
@@ -158,3 +172,35 @@ class Hybrid(QThread):
         self.Pt[self.shift_idx:self.shift_idx + self.L1, :] = self.Pt[self.shift_idx:self.shift_idx + self.L1, :] + P
         self.Zt[self.shift_idx:self.shift_idx + self.L1, :] = self.Zt[self.shift_idx:self.shift_idx + self.L1, :] + Z
         self.shift_idx = self.shift_idx + 1
+
+    def __pruning(self):
+        """
+        Prune regions does not containing pulse information
+        :return:
+        """
+
+        # (1) - Calculate the spectrum of the signals corresponding each sub-region
+        fft_input = core.windowing_on_cols(self.Pt, type="hanning")
+        fft_out = np.fft.rfft(fft_input)/self.L2
+
+        spect = np.multiply(fft_out, np.conj(fft_out))
+        # shape: (subreg, samples) -> spectrum in rows
+
+        # (2) - Calculating SNR for each subreg
+        # normalize spectrum
+        normed_spect = np.divide(spect.transpose(), spect.max(axis=1)).transpose()
+        # shape: (subreg, samples) -> normed spectrum in rows
+
+        SNRs = []
+        maxs = []
+        for i in range(normed_spect.shape[0]):
+            # work only in the pulse band range, zero out the remaining parts
+            y = np.multiply(normed_spect[i, :], self.pulse_template)
+            max_idx = int(np.argmax(y))
+            maxs.append(max_idx)
+
+            template = core.snr_binary_template(len(y), max_idx)
+            SNR = core.calc_snr(normed_spec=y, template=template)
+            SNRs.append(SNR)
+
+        # Todo: Estimated HR: mode(maxs). Accpet hr_est +/-1 bin HR regions
