@@ -1,28 +1,29 @@
-from threading import Thread
 import numpy as np
 import time
 import skimage.io as sio
 import glob
 import cv2
+from PyQt5.QtCore import QThread, pyqtSignal
 
 
-class FrameLoader(Thread):
-    def __init__(self, path,  buffer, pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False, disp_fact=1):
+class FrameLoader(QThread):
+
+    new_frame = pyqtSignal(np.ndarray)
+
+    def __init__(self, path,  pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False, disp_fact=1):
         """
 
         :param path: path to directory containing the images WITH "/" at the end
-        :param fmt: Extension of the images e.g. fmt=".jpg"
-        :param buffer: buffer list in which the images will be loaded
+        :param fmt: Extension of the images e.g. fmt=".jpg" (WARNING memory leakage issue with .tiff extension!!!!)
         :param pre: pre term befor numbering
         :param post: post term after numbering and before dot in fmt
         :param starting_frame_num: the number of frame at which to start the loading
         :param zero_padding_num: it is general to pad the numbering with zeros. e.g.: 001 -> zero_padding_num = 3
         :param disp_fact: The image will be multiplied with this number before display (scale=15 or 16 if 16bit image)
         """
-        Thread.__init__(self)
+        QThread.__init__(self)
 
         self.rootpath = path
-        self.buffer = buffer
         self.disp_scale = disp_fact
         self.disp = disp
 
@@ -41,47 +42,46 @@ class FrameLoader(Thread):
     def __create_pathlist(self):
         for frame_num in range(self.start_frame_num, self.n):
             self.filenames.append((self.rootpath + self.preterm + self.padding_code + self.postterm + self.fmt).format(frame_num))
-        ### DEBUG
-        print(self.filenames[10])
 
     def run(self):
         for idx, frame_path in enumerate(self.filenames):
 
-            if len(self.buffer.container) < 500:
-                start = time.time()
-                rgb_img = sio.imread(frame_path)
+            start = time.time()
+            rgb_img = sio.imread(frame_path)
+            # print(f"Image dtype: {rgb_img.dtype}")
+            # print(f"Image shape: {rgb_img.shape}")
 
-                # Convert to BGR
-                bgr_img = np.ndarray(shape=(rgb_img.shape[0], int(rgb_img.shape[1]), rgb_img.shape[2]), dtype=rgb_img.dtype)
-                bgr_img[:, :, 0] = rgb_img[:, :, 2]
-                bgr_img[:, :, 1] = rgb_img[:, :, 1]
-                bgr_img[:, :, 2] = rgb_img[:, :, 0]
+            # Convert to BGR
+            bgr_img = np.ndarray(shape=rgb_img.shape, dtype=rgb_img.dtype)
+            bgr_img[:, :, 0] = rgb_img[:, :, 2]
+            bgr_img[:, :, 1] = rgb_img[:, :, 1]
+            bgr_img[:, :, 2] = rgb_img[:, :, 0]
 
-                if bgr_img.size != 0:
-                    # Access the image data
-                    print(f"{idx}th frame is loaded successfully from {frame_path}")
+            if bgr_img.size != 0:
+                # Access the image data
+                # print(f"{idx}th frame is loaded successfully from {frame_path}")
 
-                    # Load into buffer
-                    with self.buffer.lock:
-                        self.buffer.container.append(bgr_img)
+                # emit frame
+                self.new_frame.emit(bgr_img)
+                time.sleep(0.1)
 
-                    if self.disp:
-                        # Preview of the video
-                        cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
-                        cv2.imshow('Loaded image', bgr_img * self.disp_scale)
-                        cv2.waitKey(1)
-                else:
-                    print("ERROR!!! The loaded image is empty!")
-                    break
-
-                fps = 1./(time.time()-start)
-                print(f"Loading framerate: {fps} FPS")
+                if self.disp:
+                    # Preview of the video
+                    cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
+                    cv2.imshow('Loaded image', bgr_img * self.disp_scale)
+                    cv2.waitKey(1)
             else:
-                # Terminate loading thread for 5 sec if lots of data in buffer
-                time.sleep(5)
+                print("ERROR!!! The loaded image is empty!")
+                break
+
+            fps = 1./(time.time()-start)
+            print(f"Loading framerate: {fps} FPS")
 
 
-class VideoLoader(Thread):
+class VideoLoader(QThread):
+
+    new_frame = pyqtSignal(np.ndarray)
+
     def __init__(self, buffer, full_path, disp):
         """
         Load frames from video extension
@@ -90,7 +90,7 @@ class VideoLoader(Thread):
         :param full_path: full path to video
         :param disp: Display loaded frame
         """
-        Thread.__init__(self)
+        QThread.__init__(self)
         self.full_path = full_path
         self.buffer = buffer
         self.disp = disp
@@ -110,7 +110,8 @@ class VideoLoader(Thread):
             ret, frame = cap.read()
             if ret is True:
                 # load into buffer
-                self.buffer.container.append(frame)
+                self.new_frame.emit(frame)
+                time.sleep(0.02)
 
                 if self.disp:
                     # Display the resulting frame

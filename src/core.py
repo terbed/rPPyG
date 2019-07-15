@@ -337,7 +337,8 @@ def calc_snr(normed_spec: np.ndarray, template: np.ndarray) -> np.float:
     :param template: the binary template for the signal (where is our signal in the spectrum)
     :return: the snr value (dB)
     """
-    return np.sum(np.square(np.multiply(template, normed_spec))) / np.sum(np.square(np.multiply(1-template, normed_spec)))
+    out = np.sum(np.square(np.multiply(template, normed_spec))) / np.sum(np.square(np.multiply(1-template, normed_spec)))
+    return out.real
 
 
 if __name__ == "__main__":

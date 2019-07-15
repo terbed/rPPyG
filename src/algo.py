@@ -1,10 +1,12 @@
 import numpy as np
-from threading import Thread
+from statistics import mode
 import time
 import src.core as core
 import logging
 import cv2
 from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex
+
+logging.basicConfig(level=logging.INFO)
 
 
 class Hybrid(QThread):
@@ -12,6 +14,10 @@ class Hybrid(QThread):
     Hybrid solution for minimal motion cases. Rigid rPPG estimation and simultaneously ROI tracking. In case of motion
     the tracked ROI is used for signal extraction, otherwise the more accurate rigid rPPG
     """
+
+    pruned = pyqtSignal(np.ndarray)
+    pulse_estimated = pyqtSignal(int)
+
     def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
         QThread.__init__(self)
         self.current_frame = None
@@ -73,7 +79,7 @@ class Hybrid(QThread):
         self.logger.addHandler(c_handler)
         self.logger.addHandler(f_handler)
 
-        self.logger.debug('Logger is initialized!')
+        self.logger.info('Logger is initialized!')
 
     @staticmethod
     def __gaussian_blur(img: np.ndarray) -> np.ndarray:
@@ -105,10 +111,11 @@ class Hybrid(QThread):
 
     @pyqtSlot(np.ndarray)
     def on_new_frame(self, src: np.ndarray):
-        self.logger.debug("Rppg thread got frame signal!")   # TODO: remove this part, only for debugging
+        self.logger.debug("Rppg thread got frame signal!")
 
         self.mtx.lock()
         self.buffer.append(src.copy())
+        print(len(self.buffer))
         self.mtx.unlock()
 
         self.start()
@@ -122,12 +129,15 @@ class Hybrid(QThread):
 
             # Remove processed frame from buffer
             del self.buffer[0]
-            self.logger.info(f"Buffer size: {len(self.buffer)}")
+            # print(len(self.buffer))
+            if len(self.buffer) > 50:
+                self.logger.warning(f"Large buffer size! Decrease frame loading speed! Buffer size: {len(self.buffer)}")
 
             # 2) ---> Extract the PPG signal
             if len(self.Id_t) == self.L1:
-                C = np.array(self.Id_t)
+                C = np.array(self.Id_t).copy()
                 del self.Id_t[0]
+                # print(f"Id_t len: {len(self.Id_t)}")
 
                 # Pulse extraction algorithm
                 P, Z = core.pos(C)
@@ -173,6 +183,18 @@ class Hybrid(QThread):
         self.Zt[self.shift_idx:self.shift_idx + self.L1, :] = self.Zt[self.shift_idx:self.shift_idx + self.L1, :] + Z
         self.shift_idx = self.shift_idx + 1
 
+    @staticmethod
+    def __get_largest_idxs(l: np.ndarray, n: int):
+        """
+        :param l: list of numbers
+        :param n: number of largest element
+        :return: the list with number of n maximum indices
+        """
+
+        out = l.argsort()[::-1][:n]
+
+        return out
+
     def __pruning(self):
         """
         Prune regions does not containing pulse information
@@ -191,16 +213,32 @@ class Hybrid(QThread):
         normed_spect = np.divide(spect.transpose(), spect.max(axis=1)).transpose()
         # shape: (subreg, samples) -> normed spectrum in rows
 
-        SNRs = []
-        maxs = []
+        SNRs = np.empty((self.n_subregs,))  # holds the SNR value for each sub-region
+        freq_argmaxs = np.empty((self.n_subregs,)) # holds the index of the max frequency component for each sub-region
         for i in range(normed_spect.shape[0]):
             # work only in the pulse band range, zero out the remaining parts
             y = np.multiply(normed_spect[i, :], self.pulse_template)
             max_idx = int(np.argmax(y))
-            maxs.append(max_idx)
+            freq_argmaxs[i] = max_idx
 
             template = core.snr_binary_template(len(y), max_idx)
             SNR = core.calc_snr(normed_spec=y, template=template)
-            SNRs.append(SNR)
+            SNRs[i] = SNR
 
-        # Todo: Estimated HR: mode(maxs). Accpet hr_est +/-1 bin HR regions
+        self.logger.info(f"The max SNR value: {max(SNRs)} dB")
+
+        # Select the first 50 signals with highest SNR
+        selected_idxs = self.__get_largest_idxs(SNRs, 50)
+        print(f"Selected indexes: {selected_idxs}")
+        # calculate a pulse rate estimate: the mode of the selected signals
+        PR_est_idx = int(np.median(freq_argmaxs[selected_idxs]))
+        print(f"Estimated pulse rate idx: {PR_est_idx}")
+        PR_est = self.f[PR_est_idx]*60
+        self.logger.info(f"Pulse rate is estimated to be: {PR_est} BPM")
+        self.pulse_estimated.emit(int(round(PR_est)))
+
+        selected_regions = [1 if (item >= PR_est_idx-1 and item <= PR_est_idx+1) else 0 for item in freq_argmaxs]
+        print(selected_regions)
+        s = np.reshape(selected_regions, (self.n_rows, self.n_cols, 1))*255
+        print(s.shape)
+        self.pruned.emit(s.astype(np.uint8))
