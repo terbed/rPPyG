@@ -4,6 +4,7 @@ import skimage.io as sio
 import glob
 import cv2
 from PyQt5.QtCore import QThread, pyqtSignal
+import sys
 
 
 class FrameLoader(QThread):
@@ -43,6 +44,10 @@ class FrameLoader(QThread):
         for frame_num in range(self.start_frame_num, self.n):
             self.filenames.append((self.rootpath + self.preterm + self.padding_code + self.postterm + self.fmt).format(frame_num))
 
+        if len(self.filenames) == 0:
+            print("ERROR! No files in selected directory!")
+            sys.exit(42)
+
     def run(self):
         for idx, frame_path in enumerate(self.filenames):
 
@@ -76,6 +81,8 @@ class FrameLoader(QThread):
 
             fps = 1./(time.time()-start)
             print(f"Loading framerate: {fps} FPS")
+
+        print("Loading images from directory is FINISHED!")
 
 
 class VideoLoader(QThread):

@@ -17,6 +17,7 @@ class Hybrid(QThread):
 
     pruned = pyqtSignal(np.ndarray)
     pulse_estimated = pyqtSignal(int)
+    pca_computed = pyqtSignal(np.ndarray, np.ndarray)
 
     def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
         QThread.__init__(self)
@@ -115,7 +116,9 @@ class Hybrid(QThread):
 
         self.mtx.lock()
         self.buffer.append(src.copy())
-        print(len(self.buffer))
+        # Check the size of buffer, and WARN if too big
+        if len(self.buffer) > 50:
+            self.logger.warning(f"Large buffer size! Decrease frame loading speed! Buffer size: {len(self.buffer)}")
         self.mtx.unlock()
 
         self.start()
@@ -126,12 +129,6 @@ class Hybrid(QThread):
             self.mtx.lock()
             self.Id_t.append(self.__downscale_image(self.__gaussian_blur(self.buffer[0])))
             self.mtx.unlock()
-
-            # Remove processed frame from buffer
-            del self.buffer[0]
-            # print(len(self.buffer))
-            if len(self.buffer) > 50:
-                self.logger.warning(f"Large buffer size! Decrease frame loading speed! Buffer size: {len(self.buffer)}")
 
             # 2) ---> Extract the PPG signal
             if len(self.Id_t) == self.L1:
@@ -158,6 +155,9 @@ class Hybrid(QThread):
                         self.__pruning()
 
                     self.counter += 1
+
+            # Remove processed frame from buffer
+            del self.buffer[0]
 
     def __chuck_add(self, P, Z):
         n = self.shift_idx - 1
@@ -195,29 +195,42 @@ class Hybrid(QThread):
 
         return out
 
-    def __pruning(self):
+    def __pruning(self) -> (np.ndarray, np.ndarray, np.ndarray):
         """
         Prune regions does not containing pulse information
-        :return:
+        :return: selected sub-region indexes, SNR weight map of subregions, where zeros are pruned, the output of fft
         """
 
-        # (1) - Calculate the spectrum of the signals corresponding each sub-region
+        # (A1) Calculate PCA on signals ------------------------------------------------------------------------------
+        principal_comps = core.pca(self.Pt, n_max_comp=3)
+        x = principal_comps[:, 0].T
+        y = np.linspace(0, x.size-1, x.size)
+        self.pca_computed.emit(y, x)
+
+        # (B1) - Calculate the spectrum of the signals corresponding each sub-region ---------------------------------
         fft_input = core.windowing_on_cols(self.Pt, type="hanning")
-        fft_out = np.fft.rfft(fft_input)/self.L2
+        # shape: (samples, sub-regs)
+
+        fft_out = np.fft.rfft(fft_input, axis=0)/self.L2
+        # shape: (samples, sub-regs)
+
+        # work only in the pulse band range, zero out the remaining parts
+        fft_out = np.multiply(fft_out.T, self.pulse_template).T
+        # shape: (samples, sub-regs)
 
         spect = np.multiply(fft_out, np.conj(fft_out))
-        # shape: (subreg, samples) -> spectrum in rows
+        # shape: (samples, sub-regs) -> spectrum in cols for each sub-reg
 
-        # (2) - Calculating SNR for each subreg
+        # (B2) - Calculating SNR for each subreg and estimate pulse rate
         # normalize spectrum
-        normed_spect = np.divide(spect.transpose(), spect.max(axis=1)).transpose()
-        # shape: (subreg, samples) -> normed spectrum in rows
+        spect_maxs = spect.max(axis=0)
+        normed_spect = np.divide(spect, spect_maxs)
+        # shape: (samples, sub-regs) -> normed spectrum in rows
 
         SNRs = np.empty((self.n_subregs,))  # holds the SNR value for each sub-region
         freq_argmaxs = np.empty((self.n_subregs,)) # holds the index of the max frequency component for each sub-region
-        for i in range(normed_spect.shape[0]):
-            # work only in the pulse band range, zero out the remaining parts
-            y = np.multiply(normed_spect[i, :], self.pulse_template)
+        for i in range(normed_spect.shape[1]):
+            y = normed_spect[:, i]
             max_idx = int(np.argmax(y))
             freq_argmaxs[i] = max_idx
 
@@ -227,18 +240,110 @@ class Hybrid(QThread):
 
         self.logger.info(f"The max SNR value: {max(SNRs)} dB")
 
-        # Select the first 50 signals with highest SNR
+        # Select the first 50 signals with highest SNR TODO: better to have a threshold value
         selected_idxs = self.__get_largest_idxs(SNRs, 50)
-        print(f"Selected indexes: {selected_idxs}")
-        # calculate a pulse rate estimate: the mode of the selected signals
+
+        # calculate a pulse rate estimate: the median of the selected (high SNR) signals
         PR_est_idx = int(np.median(freq_argmaxs[selected_idxs]))
-        print(f"Estimated pulse rate idx: {PR_est_idx}")
         PR_est = self.f[PR_est_idx]*60
         self.logger.info(f"Pulse rate is estimated to be: {PR_est} BPM")
         self.pulse_estimated.emit(int(round(PR_est)))
 
-        selected_regions = [1 if (item >= PR_est_idx-1 and item <= PR_est_idx+1) else 0 for item in freq_argmaxs]
-        print(selected_regions)
-        s = np.reshape(selected_regions, (self.n_rows, self.n_cols, 1))*255
-        print(s.shape)
+        # TODO: Also add SNR constrait?
+        regions_wmap = [SNRs[idx] if (item >= PR_est_idx-1 and item <= PR_est_idx+1) else 0 for idx, item in enumerate(freq_argmaxs)]
+        regions_wmap = regions_wmap/np.max(regions_wmap)
+        # Display pruned binary map
+        s = np.reshape(regions_wmap, (self.n_rows, self.n_cols, 1))*255
         self.pruned.emit(s.astype(np.uint8))
+
+        #  CALCULATE SIMILARITY MATRIX =============================================================================
+        n = selected_idxs.size
+        spect_CC = np.empty(shape=(n, n, self.f.size))
+        spect_NCC = np.empty(shape=(n, n, self.f.size))
+        self.logger.info(f"Calculate similarity matrix for {n} selected sub-regions...")
+
+        # 1. Spectrum peak amplitude
+        F = np.empty(shape=(n, n))
+        # The diagonal is already almost computed (before in the pruning step)
+        for i in range(n):
+            idx = selected_idxs[i]
+            spect_CC[i, i, :] = spect[:, idx]
+            F[i, i] = spect_maxs[idx]
+        # compute the cross-diagonal elements
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    # select sub-regions those of which are not pruned
+                    row = selected_idxs[i]
+                    col = selected_idxs[j]
+                    spect_CC[i, j, :] = np.multiply(fft_out[:, row], fft_out[:, col].conj())
+                    F[i, j] = np.max(spect_CC[i, j, :])
+
+        # 2. Spectrum phase
+        P = np.empty(shape=(n, n))
+
+        for i in range(n):
+            # In the diagonal there is only real part
+            norm = np.sqrt(np.sum(np.square(np.abs(spect_CC[i, i, :]))))
+            spect_NCC[i, i, :] = spect_CC[i, i, :]/norm
+            P[i, i] = np.max(np.fft.irfft(spect_NCC[i, i, :]))
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    norm = np.sqrt(np.sum(np.abs(np.multiply(spect_CC[i, j, :], spect_CC[i, j, :].conj()))))
+                    spect_NCC[i, j, :] = spect_CC[i, j, :]/norm
+                    P[i, j] = np.max(np.fft.irfft(spect_NCC[i, j, :]))
+
+        # 3. Calculate spectrum entropy
+        E = np.empty(shape=(n, n))
+        norm = np.log(self.hr_band[1]-self.hr_band[0])
+        for i in range(n):
+            E[i, i] = np.sum(
+                        np.multiply(
+                                spect_NCC[i, i, self.hr_min_idx:self.hr_max_idx+1],
+                                np.log(np.abs(spect_NCC[i, i, self.hr_min_idx:self.hr_max_idx+1]))
+                                    )
+                            ) / norm
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    E[i, j] = np.sum(
+                        np.multiply(
+                            spect_NCC[i, j, self.hr_min_idx:self.hr_max_idx + 1],
+                            np.log(np.abs(spect_NCC[i, j, self.hr_min_idx:self.hr_max_idx + 1]))
+                        )
+                    ) / norm
+
+        # 4. Calculate Inner product
+        I = np.empty(shape=(n, n))
+        for i in range(n):
+            idx = selected_idxs[i]
+            norm = np.sqrt(np.sum(np.square(self.Pt[:, idx])))
+            I[i, i] = (self.Pt[:, idx]/norm).dot((self.Pt[:, idx]/norm).T)
+        # Fill cross elements of a symmetric matrix
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                row = selected_idxs[i]
+                col = selected_idxs[j]
+                norm_r = np.sqrt(np.sum(np.square(self.Pt[:, row])))
+                norm_c = np.sqrt(np.sum(np.square(self.Pt[:, col])))
+                tmp = (self.Pt[:, row]/norm_r).dot((self.Pt[:, col]/norm_c).T)
+                I[i, j] = tmp
+                I[j, i] = tmp
+
+        # Construct similarity matrix from previous elements
+        tmp = np.empty(shape=(n, n, 4))
+        tmp[:, :, 0] = F
+        tmp[:, :, 1] = P
+        tmp[:, :, 2] = E
+        tmp[:, :, 3] = I
+        sigma = np.squeeze(np.std(tmp, axis=2))
+
+        # Multiply different features
+        mult_feat = np.ones(shape=(n, n))
+        for idx in range(4):
+            mult_feat = np.multiply(mult_feat, np.squeeze(tmp[:, :, idx]))
+
+        sim_mat = 1 - np.exp(-np.divide(np.square(mult_feat), 2*np.square(sigma)))
+
+        # TODO: SVD on sim_mat and remap first eigen vector

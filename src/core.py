@@ -1,7 +1,7 @@
 import numpy as np
 from skimage.transform import downscale_local_mean
 from scipy.spatial.distance import cdist
-
+import cv2
 
 # --------------------------------------------- FVP ------------------------------------------------------------------
 def fvp(frame, patch_size, K):
@@ -87,7 +87,7 @@ def pos(C, order=(1, 0, 2)):
     # Calculating pulse signal for each weight
     P = X + np.multiply(Y, np.divide(np.std(X, axis=0), np.std(Y, axis=0)))
 
-    # Calculate the intensity signal to supress noise
+    # Calculate the intensity signal to suppress noise
     Z = C[:, :, 0] + C[:, :, 1] + C[:, :, 2]
 
     # norm and zero mean signals
@@ -96,6 +96,9 @@ def pos(C, order=(1, 0, 2)):
 
     Z = np.subtract(Z, np.mean(Z, axis=0))
     Z = np.divide(Z, np.std(Z, axis=0))
+
+    nans = np.isnan(P)
+    P[nans] = 0.
 
     return P, Z
 
@@ -232,7 +235,7 @@ def windowing_on_cols(src: np.ndarray, type="hanning") -> np.ndarray:
     :param src: array on which hanning will be applied
     :param type: "hanning" for hanning or "hamming" for hamming window
     :param axis: axis on which to apply window
-    :return: the windowed TRANSPOSED array
+    :return: the windowed array with same shape as input
     """
     l = src.shape[0]
     if type == "hamming":
@@ -242,7 +245,7 @@ def windowing_on_cols(src: np.ndarray, type="hanning") -> np.ndarray:
 
     out = np.multiply(src.transpose(), w)
 
-    return out
+    return out.T
 
 
 # --------------------------------------------- Signal Comb & Plot ----------------------------------------------------
@@ -339,6 +342,25 @@ def calc_snr(normed_spec: np.ndarray, template: np.ndarray) -> np.float:
     """
     out = np.sum(np.square(np.multiply(template, normed_spec))) / np.sum(np.square(np.multiply(1-template, normed_spec)))
     return out.real
+
+
+def pca(X: np.ndarray, n_max_comp: int) -> np.ndarray:
+    """
+    Computes and returns the first n_max principal component
+    :param X: Features in cols
+    :param n_max_comp: Number of principal components to return
+    :return: the first :param n_max_comp number of back-projected  principal components placed in columns
+    """
+
+    means, eigen_vecs = cv2.PCACompute(X, mean=None, maxComponents=n_max_comp)
+
+    # Subtract the mean from data to be zero centered
+    X_cent = np.subtract(X, means)
+
+    # Project X onto PC space
+    X_pca = X_cent @ eigen_vecs.T
+
+    return X_pca
 
 
 if __name__ == "__main__":
