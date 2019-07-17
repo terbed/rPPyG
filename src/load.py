@@ -11,7 +11,7 @@ class FrameLoader(QThread):
 
     new_frame = pyqtSignal(np.ndarray)
 
-    def __init__(self, path,  pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, disp=False, disp_fact=1):
+    def __init__(self, path,  pre, post, fmt=".png", starting_frame_num=0, zero_padding_num=1, msleep=20):
         """
 
         :param path: path to directory containing the images WITH "/" at the end
@@ -20,13 +20,12 @@ class FrameLoader(QThread):
         :param post: post term after numbering and before dot in fmt
         :param starting_frame_num: the number of frame at which to start the loading
         :param zero_padding_num: it is general to pad the numbering with zeros. e.g.: 001 -> zero_padding_num = 3
-        :param disp_fact: The image will be multiplied with this number before display (scale=15 or 16 if 16bit image)
+        :param msleep: sleep in milliseconds after reading an image (default 20 ms)
         """
         QThread.__init__(self)
 
         self.rootpath = path
-        self.disp_scale = disp_fact
-        self.disp = disp
+        self.sleep_dur = msleep
 
         self.fs = glob.glob(f"{path}/*{fmt}")
         self.n = len(self.fs)
@@ -68,13 +67,8 @@ class FrameLoader(QThread):
 
                 # emit frame
                 self.new_frame.emit(bgr_img)
-                time.sleep(0.1)
+                self.msleep(self.sleep_dur)
 
-                if self.disp:
-                    # Preview of the video
-                    cv2.namedWindow('Loaded image', cv2.WINDOW_AUTOSIZE)
-                    cv2.imshow('Loaded image', bgr_img * self.disp_scale)
-                    cv2.waitKey(1)
             else:
                 print("ERROR!!! The loaded image is empty!")
                 break

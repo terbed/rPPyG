@@ -327,8 +327,8 @@ def snr_binary_template(n: int, max_idx: int) -> np.ndarray:
     out[0, max_idx-1:max_idx+1+1] = 1
 
     # first harmonic
-    if max_idx*2+2 < n-1:
-        out[0, max_idx*2-2:max_idx*2+2+1] = 1
+    # if max_idx*2+2 < n-1:
+    #     out[0, max_idx*2-2:max_idx*2+2+1] = 1
 
     return out
 

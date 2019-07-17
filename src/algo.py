@@ -18,6 +18,7 @@ class Hybrid(QThread):
     pruned = pyqtSignal(np.ndarray)
     pulse_estimated = pyqtSignal(int)
     pca_computed = pyqtSignal(np.ndarray, np.ndarray)
+    weight_map_calculated = pyqtSignal(np.ndarray)
 
     def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
         QThread.__init__(self)
@@ -151,7 +152,6 @@ class Hybrid(QThread):
                         self.logger.debug("Calculating similarity matrix and combining pulse signals...")
                         self.counter = 0
 
-                        # TODO: implement pruning, similarity matrix and stuff
                         self.__pruning()
 
                     self.counter += 1
@@ -202,7 +202,10 @@ class Hybrid(QThread):
         """
 
         # (A1) Calculate PCA on signals ------------------------------------------------------------------------------
-        principal_comps = core.pca(self.Pt, n_max_comp=3)
+        principal_comps = core.pca(self.Pt, n_max_comp=5)
+        princ_freqdom = np.fft.rfft(principal_comps, axis=0)
+        princ_freqdom_argmaxs = np.argmax(np.abs(np.multiply(princ_freqdom.T, self.pulse_template).T), axis=0)
+        self.logger.info(f"The spectrum peaks of the main 5 principal components in order: {self.f[princ_freqdom_argmaxs]*60} BPM")
         x = principal_comps[:, 0].T
         y = np.linspace(0, x.size-1, x.size)
         self.pca_computed.emit(y, x)
@@ -240,7 +243,7 @@ class Hybrid(QThread):
 
         self.logger.info(f"The max SNR value: {max(SNRs)} dB")
 
-        # Select the first 50 signals with highest SNR TODO: better to have a threshold value
+        # Select the first 50 signals with highest SNR to estimate PR TODO: better to have a threshold value
         selected_idxs = self.__get_largest_idxs(SNRs, 50)
 
         # calculate a pulse rate estimate: the median of the selected (high SNR) signals
@@ -249,35 +252,45 @@ class Hybrid(QThread):
         self.logger.info(f"Pulse rate is estimated to be: {PR_est} BPM")
         self.pulse_estimated.emit(int(round(PR_est)))
 
-        # TODO: Also add SNR constrait?
+        # Prune regions
         regions_wmap = [SNRs[idx] if (item >= PR_est_idx-1 and item <= PR_est_idx+1) else 0 for idx, item in enumerate(freq_argmaxs)]
         regions_wmap = regions_wmap/np.max(regions_wmap)
+        regions_wmap = np.array(regions_wmap)
         # Display pruned binary map
         s = np.reshape(regions_wmap, (self.n_rows, self.n_cols, 1))*255
         self.pruned.emit(s.astype(np.uint8))
 
+
         #  CALCULATE SIMILARITY MATRIX =============================================================================
-        n = selected_idxs.size
-        spect_CC = np.empty(shape=(n, n, self.f.size))
-        spect_NCC = np.empty(shape=(n, n, self.f.size))
+        # recreate selected_idxs based on region weightmaps
+        accepted_idxs = []
+        for idx, item in enumerate(regions_wmap):
+            if item > 0:
+                accepted_idxs.append(idx)
+        accepted_idxs = np.array(accepted_idxs)
+
+        n = accepted_idxs.size
+
+        spect_CC = np.empty(shape=(n, n, self.f.size), dtype=np.complex64)
+        spect_NCC = np.empty(shape=(n, n, self.f.size), dtype=np.complex64)
         self.logger.info(f"Calculate similarity matrix for {n} selected sub-regions...")
 
         # 1. Spectrum peak amplitude
         F = np.empty(shape=(n, n))
         # The diagonal is already almost computed (before in the pruning step)
         for i in range(n):
-            idx = selected_idxs[i]
-            spect_CC[i, i, :] = spect[:, idx]
-            F[i, i] = spect_maxs[idx]
+            idx = accepted_idxs[i]
+            spect_CC[i, i, :] = spect[:, idx]*(SNRs[idx]**2)
+            F[i, i] = np.abs(spect_maxs[idx])
         # compute the cross-diagonal elements
         for i in range(n):
             for j in range(n):
                 if i != j:
                     # select sub-regions those of which are not pruned
-                    row = selected_idxs[i]
-                    col = selected_idxs[j]
-                    spect_CC[i, j, :] = np.multiply(fft_out[:, row], fft_out[:, col].conj())
-                    F[i, j] = np.max(spect_CC[i, j, :])
+                    row = accepted_idxs[i]
+                    col = accepted_idxs[j]
+                    spect_CC[i, j, :] = np.multiply(fft_out[:, row]*SNRs[row], fft_out[:, col].conj()*SNRs[col])
+                    F[i, j] = np.max(np.abs(spect_CC[i, j, :]))
 
         # 2. Spectrum phase
         P = np.empty(shape=(n, n))
@@ -300,7 +313,7 @@ class Hybrid(QThread):
         for i in range(n):
             E[i, i] = np.sum(
                         np.multiply(
-                                spect_NCC[i, i, self.hr_min_idx:self.hr_max_idx+1],
+                                np.abs(spect_NCC[i, i, self.hr_min_idx:self.hr_max_idx+1]),
                                 np.log(np.abs(spect_NCC[i, i, self.hr_min_idx:self.hr_max_idx+1]))
                                     )
                             ) / norm
@@ -309,7 +322,7 @@ class Hybrid(QThread):
                 if i != j:
                     E[i, j] = np.sum(
                         np.multiply(
-                            spect_NCC[i, j, self.hr_min_idx:self.hr_max_idx + 1],
+                            np.abs(spect_NCC[i, j, self.hr_min_idx:self.hr_max_idx + 1]),
                             np.log(np.abs(spect_NCC[i, j, self.hr_min_idx:self.hr_max_idx + 1]))
                         )
                     ) / norm
@@ -317,14 +330,14 @@ class Hybrid(QThread):
         # 4. Calculate Inner product
         I = np.empty(shape=(n, n))
         for i in range(n):
-            idx = selected_idxs[i]
+            idx = accepted_idxs[i]
             norm = np.sqrt(np.sum(np.square(self.Pt[:, idx])))
             I[i, i] = (self.Pt[:, idx]/norm).dot((self.Pt[:, idx]/norm).T)
         # Fill cross elements of a symmetric matrix
         for i in range(n - 1):
             for j in range(i + 1, n):
-                row = selected_idxs[i]
-                col = selected_idxs[j]
+                row = accepted_idxs[i]
+                col = accepted_idxs[j]
                 norm_r = np.sqrt(np.sum(np.square(self.Pt[:, row])))
                 norm_c = np.sqrt(np.sum(np.square(self.Pt[:, col])))
                 tmp = (self.Pt[:, row]/norm_r).dot((self.Pt[:, col]/norm_c).T)
@@ -346,4 +359,31 @@ class Hybrid(QThread):
 
         sim_mat = 1 - np.exp(-np.divide(np.square(mult_feat), 2*np.square(sigma)))
 
-        # TODO: SVD on sim_mat and remap first eigen vector
+        # Compute the eigenvectors
+        u, s_vals, _ = np.linalg.svd(sim_mat, compute_uv=True)
+
+        # weights will be the largest eigenvector
+        w = u[:, 0]
+
+        # ensure positive sign
+        if w[0] < 0:
+            w = -1*w
+
+        # shift to be positive
+        w = w - np.min(w)
+
+        # norm with max
+        w = w / np.max(w)
+
+        # remap weight
+        weight_map = np.zeros(shape=regions_wmap.shape)
+        for counter, idx in enumerate(accepted_idxs):
+            weight_map[idx] = w[counter]
+
+        weight_map = np.reshape(weight_map, (self.n_rows, self.n_cols, 1))
+        self.weight_map_calculated.emit(weight_map)
+
+        # TODO: combine the result of PCA and avrg PR
+        # TODO: create binary mask from weight_map with automated threshold algorithm [14]
+        # TODO: confidence metric
+        # TODO: Initialize tracker

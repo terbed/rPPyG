@@ -2,6 +2,7 @@ from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex, Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QMainWindow, QLCDNumber
 from PyQt5.QtGui import QImage, QPixmap
 import pyqtgraph as pg
+import matplotlib.pyplot as plt
 import time
 import numpy as np
 
@@ -10,7 +11,7 @@ class ImgDisp(QWidget):
     """
     A class to display images
     """
-    def __init__(self, title: str, offset_x=0, offset_y=0, width=500, height=500, disp_fact=1):
+    def __init__(self, title: str, offset_x=0, offset_y=0, width=500, height=500, heat_map=False, disp_fact=1):
         """
         :param title:
         :param offset_x:
@@ -23,6 +24,7 @@ class ImgDisp(QWidget):
         self.setWindowTitle(title)
         self.setGeometry(offset_x, offset_y, width, height)
         self.disp_fact = disp_fact
+        self.heat_map = heat_map
         # self.resize(500, 500)
         # create a label
         self.label = QLabel(self)
@@ -40,11 +42,19 @@ class ImgDisp(QWidget):
             tmp = (tmp/256).astype(np.uint8)
 
         bytes_per_line = colors * imw    # If the bit depth is 8 bit (if 16 then multiply it with 2)
+
         if self.disp_fact != 1:
             tmp = tmp*self.disp_fact
 
-        if colors == 1:
+        if colors == 1 and self.heat_map is False:
             fmt = QImage.Format_Grayscale8
+        elif colors == 1 and self.heat_map is True:
+            cmap = plt.get_cmap('viridis')
+            rgba_img = cmap(np.squeeze(tmp))
+            tmp = np.delete(rgba_img, 3, 2)
+            tmp = (tmp*255).astype(np.uint8)
+            bytes_per_line = bytes_per_line*3
+            fmt = QImage.Format_RGB888
         else:
             fmt = QImage.Format_RGB888
 
@@ -57,6 +67,10 @@ class ImgDisp(QWidget):
 
     @pyqtSlot(np.ndarray)
     def set_image(self, src):
+        """
+        :param src: image with shape: (rows, cols, channels) if mono then channels=1
+        :return:
+        """
         qimg = self.get_qimage(src)
         p = QPixmap.fromImage(qimg)
         self.label.setPixmap(p.scaled(self.label_w, self.label_h, Qt.KeepAspectRatio))
