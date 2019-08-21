@@ -1,0 +1,56 @@
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-07-17 15:25:24,560 | Hybrid | INFO | Logger is initialized!
+2019-07-17 15:25:24,561 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-07-17 15:26:02,229 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  87.890625 52.734375] BPM
+2019-07-17 15:26:02,302 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-07-17 15:26:02,308 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-07-17 15:26:02,311 | Hybrid | INFO | Calculate similarity matrix for 135 selected sub-regions...
+2019-07-17 15:26:11,337 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  46.875    87.890625] BPM
+2019-07-17 15:26:11,423 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-07-17 15:26:11,424 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-07-17 15:26:11,429 | Hybrid | INFO | Calculate similarity matrix for 128 selected sub-regions...
+2019-07-17 15:26:20,766 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [87.890625 46.875    87.890625] BPM
+2019-07-17 15:26:20,808 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-07-17 15:26:20,808 | Hybrid | INFO | Pulse rate is estimated to be: 46.875 BPM
+2019-07-17 15:26:20,812 | Hybrid | INFO | Calculate similarity matrix for 156 selected sub-regions...
+2019-07-17 15:26:30,934 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [87.890625 46.875    41.015625] BPM
+2019-07-17 15:26:30,985 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-07-17 15:26:30,985 | Hybrid | INFO | Pulse rate is estimated to be: 64.453125 BPM
+2019-07-17 15:26:30,988 | Hybrid | INFO | Calculate similarity matrix for 56 selected sub-regions...
+2019-07-17 15:26:39,037 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [87.890625 46.875    41.015625] BPM
+2019-07-17 15:26:39,080 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-07-17 15:26:39,081 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-07-17 15:26:39,093 | Hybrid | INFO | Calculate similarity matrix for 153 selected sub-regions...
+2019-07-17 15:26:49,029 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  64.453125 82.03125 ] BPM
+2019-07-17 15:26:49,078 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-07-17 15:26:49,079 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-07-17 15:26:49,081 | Hybrid | INFO | Calculate similarity matrix for 185 selected sub-regions...
+2019-07-17 15:26:59,159 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  64.453125 82.03125 ] BPM
+2019-07-17 15:26:59,224 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-07-17 15:26:59,225 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-07-17 15:26:59,229 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-07-17 15:27:10,250 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  64.453125 41.015625] BPM
+2019-07-17 15:27:10,321 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-07-17 15:27:10,322 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-07-17 15:27:10,327 | Hybrid | INFO | Calculate similarity matrix for 128 selected sub-regions...
+2019-07-17 15:27:19,279 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [82.03125  52.734375 41.015625] BPM
+2019-07-17 15:27:19,340 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-07-17 15:27:19,348 | Hybrid | INFO | Pulse rate is estimated to be: 52.734375 BPM
+2019-07-17 15:27:19,351 | Hybrid | INFO | Calculate similarity matrix for 111 selected sub-regions...
+2019-07-17 15:27:28,053 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [87.890625 46.875    41.015625] BPM
+2019-07-17 15:27:28,111 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-07-17 15:27:28,111 | Hybrid | INFO | Pulse rate is estimated to be: 52.734375 BPM
+2019-07-17 15:27:28,113 | Hybrid | INFO | Calculate similarity matrix for 128 selected sub-regions...
+2019-07-17 15:27:37,650 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [41.015625 46.875    52.734375] BPM
+2019-07-17 15:27:37,693 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-07-17 15:27:37,694 | Hybrid | INFO | Pulse rate is estimated to be: 52.734375 BPM
+2019-07-17 15:27:37,696 | Hybrid | INFO | Calculate similarity matrix for 119 selected sub-regions...
+2019-07-17 15:27:47,021 | Hybrid | INFO | The spectrum peaks of the main 3 principal components in order: [76.171875 52.734375 87.890625] BPM
+2019-07-17 15:27:47,065 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-07-17 15:27:47,066 | Hybrid | INFO | Pulse rate is estimated to be: 52.734375 BPM
+2019-07-17 15:27:47,070 | Hybrid | INFO | Calculate similarity matrix for 127 selected sub-regions...

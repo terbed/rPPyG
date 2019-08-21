@@ -1,10 +1,10 @@
 import numpy as np
-from statistics import mode
 import time
 import src.core as core
 import logging
 import cv2
 from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex
+from sklearn.cluster import AffinityPropagation
 
 logging.basicConfig(level=logging.INFO)
 
@@ -19,6 +19,7 @@ class Hybrid(QThread):
     pulse_estimated = pyqtSignal(int)
     pca_computed = pyqtSignal(np.ndarray, np.ndarray)
     weight_map_calculated = pyqtSignal(np.ndarray)
+    bin_map_calculated = pyqtSignal(np.ndarray)
 
     def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
         QThread.__init__(self)
@@ -57,6 +58,11 @@ class Hybrid(QThread):
         self.Zt = np.zeros(shape=(self.L2, self.n_subregs), dtype=np.double)
         self.shift_idx = 0
         self.counter = frame_rate*2
+
+        # set up threshold values
+        self.thrs_nclust = 0.05 * self.n_subregs
+        self.thrs_SNR = 4.
+        self.thrs_sparsity = 0.75
 
         # logger for the class
         self.logger = logging.getLogger("Hybrid")
@@ -183,18 +189,6 @@ class Hybrid(QThread):
         self.Zt[self.shift_idx:self.shift_idx + self.L1, :] = self.Zt[self.shift_idx:self.shift_idx + self.L1, :] + Z
         self.shift_idx = self.shift_idx + 1
 
-    @staticmethod
-    def __get_largest_idxs(l: np.ndarray, n: int):
-        """
-        :param l: list of numbers
-        :param n: number of largest element
-        :return: the list with number of n maximum indices
-        """
-
-        out = l.argsort()[::-1][:n]
-
-        return out
-
     def __pruning(self) -> (np.ndarray, np.ndarray, np.ndarray):
         """
         Prune regions does not containing pulse information
@@ -243,11 +237,8 @@ class Hybrid(QThread):
 
         self.logger.info(f"The max SNR value: {max(SNRs)} dB")
 
-        # Select the first 50 signals with highest SNR to estimate PR TODO: better to have a threshold value
-        selected_idxs = self.__get_largest_idxs(SNRs, 50)
-
         # calculate a pulse rate estimate: the median of the selected (high SNR) signals
-        PR_est_idx = int(np.median(freq_argmaxs[selected_idxs]))
+        PR_est_idx = int(np.median(freq_argmaxs))
         PR_est = self.f[PR_est_idx]*60
         self.logger.info(f"Pulse rate is estimated to be: {PR_est} BPM")
         self.pulse_estimated.emit(int(round(PR_est)))
@@ -259,7 +250,6 @@ class Hybrid(QThread):
         # Display pruned binary map
         s = np.reshape(regions_wmap, (self.n_rows, self.n_cols, 1))*255
         self.pruned.emit(s.astype(np.uint8))
-
 
         #  CALCULATE SIMILARITY MATRIX =============================================================================
         # recreate selected_idxs based on region weightmaps
@@ -384,6 +374,53 @@ class Hybrid(QThread):
         self.weight_map_calculated.emit(weight_map)
 
         # TODO: combine the result of PCA and avrg PR
-        # TODO: create binary mask from weight_map with automated threshold algorithm [14]
-        # TODO: confidence metric
+
+        # Create binary mask from weight_map with automated threshold algorithm --------------------------------------
+        #bin_map = cv2.adaptiveThreshold(np.round(weight_map*255).astype(np.uint8), 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, int(self.n_rows/2), int(self.n_cols/2))
+        ret, bin_map = cv2.threshold(np.round(weight_map*255).astype(np.uint8), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        self.bin_map_calculated.emit(np.reshape(bin_map, (bin_map.shape[0], bin_map.shape[1], 1)))
+
+        # TODO: confidence metric -----------------------------------------------------------------------------------
+        # 1.) SNR criteria, default value: 4dB
+        # The average SNR of the sub-regions where binary mask is 1
+        binary_map_SNR = []
+        for idx, item in enumerate(bin_map.flatten()):
+            if item != 0:
+                binary_map_SNR.append(SNRs[idx])
+
+        avrg_SNR = np.average(binary_map_SNR)
+        crit_SNR = avrg_SNR >= self.thrs_SNR
+        self.logger.info(f"Average SNR on segmented skin region: {avrg_SNR} [dB]")
+        self.logger.info(f"SNR criteria fulfilled? -> {crit_SNR}\n")
+
+        # TODO: clustering the binary map
+        # #############################################################################
+        # Compute Affinity Propagation
+        # af = AffinityPropagation().fit(bin_map)
+        # cluster_centers_indices = af.cluster_centers_indices_
+        # labels = af.labels_
+        # n_clusters_ = len(cluster_centers_indices)
+        # self.logger.info(f"Number of clusters in binary map: {n_clusters_}")
+        #
+        # # Select larges cluster
+        # label_count = np.zeros(shape=(n_clusters_,))
+        # for item in labels:
+        #     label_count[item] += 1
+        #
+        # n_largest_cluster = np.max(label_count)
+
+        # 2.) Reasonable number of sub-region, default: 0.0075*N
+        n_largest_cluster = len(binary_map_SNR)
+        crit_clust_size = n_largest_cluster >= self.thrs_nclust
+        self.logger.info(f"Number of region in largest cluster: {n_largest_cluster}")
+        self.logger.info(f"Cluster size criteria fulfilled? -> {crit_clust_size}\n")
+
+        # 3.) Sparsity criteria of the binary mask
+        n_bin = len(binary_map_SNR)
+        crit_clust_spars = n_bin/n_largest_cluster >= self.thrs_sparsity
+        self.logger.info(f"Cluster sparsity criteria fulfilled? -> {crit_clust_spars}\n")
+
+        # OVERALL
+        self.logger.info(f"ALL criteria fulfilled? -> {crit_clust_spars and crit_clust_size and crit_SNR}\n")
+
         # TODO: Initialize tracker
