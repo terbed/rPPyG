@@ -12,16 +12,18 @@ app = QApplication([])
 #algo = Hybrid(width=1502, height=1002, patch_size=100, l1=20)
 #algo = Hybrid()
 algo = Hybrid(width=1040, height=1392, patch_size=50, frame_rate=25)
+tracker = RoiTracker()
 
 # SET UP DISPLAY -------------------------------------------------------
 frame_disp = ImgDisp("Frame", disp_fact=1, width=1040/2, height=1392/2)
-pruned_disp = ImgDisp("Selected regions", width=1040/2, height=1392/2, heat_map=True, offset_x=1040/2+10)
+# pruned_disp = ImgDisp("Selected regions", width=1040/2, height=1392/2, heat_map=True, offset_x=1040/2+10)
 weightmap_disp = ImgDisp("Weight map from similarity mat", width=1040/2, height=1392/2, heat_map=True, offset_x=1040+20)
 binmap_disp = ImgDisp("Binary map - skin segmentation", width=1040/2, height=1392/2, heat_map=False, offset_x=1040+40)
 # frame_disp = ImgDisp("Frame", disp_fact=16)
 # pruned_disp = ImgDisp("Selected regions")
 pr_disp = NumericDisp("Pulse Rate")
 pca_signal_disp = SignalDisp("First principal component", offset_y=1392/2+10)
+tracker_disp = ImgDisp("Tracked Frame", disp_fact=1, width=1040/2, height=1392/2)
 
 # SET UP VIDEO SOURCE ---------------------------------------------------
 #cam = Camera(buffer)
@@ -35,14 +37,19 @@ loader = FrameLoader("/media/terbe/sztaki/MMSE-HR/T1_25FPS/", pre="", post="", f
 #loader = VideoLoader(buffer, "/media/terbe/sztaki/NADAM/segmented/output_red.mp4", disp=True)
 
 # CONNECT SIGNALS --------------------------------------------------------
+# Algos
 loader.new_frame.connect(algo.on_new_frame)
-loader.new_frame.connect(frame_disp.set_image)
+algo.init_trackers_ROI.connect(tracker.init_tracker)
+algo.update_trackers_ROI.connect(tracker.on_new_frame)
 
+# Displays
+loader.new_frame.connect(frame_disp.set_image)
 algo.pulse_estimated.connect(pr_disp.set_value)
-algo.pruned.connect(pruned_disp.set_image)
+# algo.pruned.connect(pruned_disp.set_image)
 algo.pca_computed.connect(pca_signal_disp.set_data)
 algo.weight_map_calculated.connect(weightmap_disp.set_image)
 algo.bin_map_calculated.connect(binmap_disp.set_image)
+tracker.frame_tracked.connect(tracker_disp.set_image)
 
 if __name__ == "__main__":
     loader.start()

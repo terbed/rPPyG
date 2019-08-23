@@ -20,6 +20,8 @@ class Hybrid(QThread):
     pca_computed = pyqtSignal(np.ndarray, np.ndarray)
     weight_map_calculated = pyqtSignal(np.ndarray)
     bin_map_calculated = pyqtSignal(np.ndarray)
+    update_trackers_ROI = pyqtSignal(np.ndarray)
+    init_trackers_ROI = pyqtSignal(np.ndarray, tuple)
 
     def __init__(self, frame_rate=20, l1=32, l2=256, hr_band=(40/60., 250/60.), width=500, height=500, patch_size=25):
         QThread.__init__(self)
@@ -63,6 +65,7 @@ class Hybrid(QThread):
         self.thrs_nclust = 0.05 * self.n_subregs
         self.thrs_SNR = 4.
         self.thrs_sparsity = 0.75
+        self.is_tracker_inited = False
 
         # logger for the class
         self.logger = logging.getLogger("Hybrid")
@@ -134,8 +137,10 @@ class Hybrid(QThread):
         while len(self.buffer) != 0:
             # 1) ---> Down-sample image and append to container list
             self.mtx.lock()
-            self.Id_t.append(self.__downscale_image(self.__gaussian_blur(self.buffer[0])))
+            current_frame = self.buffer[0].copy()
             self.mtx.unlock()
+
+            self.Id_t.append(self.__downscale_image(self.__gaussian_blur(current_frame)))
 
             # 2) ---> Extract the PPG signal
             if len(self.Id_t) == self.L1:
@@ -158,9 +163,12 @@ class Hybrid(QThread):
                         self.logger.debug("Calculating similarity matrix and combining pulse signals...")
                         self.counter = 0
 
-                        self.__pruning()
+                        self.__processing_algorithm(current_frame)
 
                     self.counter += 1
+                    if self.is_tracker_inited:
+                        # Criteria is already met once before -> we can simply update the trackes
+                        self.update_trackers_ROI.emit(current_frame)
 
             # Remove processed frame from buffer
             del self.buffer[0]
@@ -189,10 +197,10 @@ class Hybrid(QThread):
         self.Zt[self.shift_idx:self.shift_idx + self.L1, :] = self.Zt[self.shift_idx:self.shift_idx + self.L1, :] + Z
         self.shift_idx = self.shift_idx + 1
 
-    def __pruning(self) -> (np.ndarray, np.ndarray, np.ndarray):
+    def __processing_algorithm(self, current_frame):
         """
-        Prune regions does not containing pulse information
-        :return: selected sub-region indexes, SNR weight map of subregions, where zeros are pruned, the output of fft
+
+                :return:
         """
 
         # (A1) Calculate PCA on signals ------------------------------------------------------------------------------
@@ -380,7 +388,7 @@ class Hybrid(QThread):
         ret, bin_map = cv2.threshold(np.round(weight_map*255).astype(np.uint8), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         self.bin_map_calculated.emit(np.reshape(bin_map, (bin_map.shape[0], bin_map.shape[1], 1)))
 
-        # TODO: confidence metric -----------------------------------------------------------------------------------
+        # Confidence metric -----------------------------------------------------------------------------------
         # 1.) SNR criteria, default value: 4dB
         # The average SNR of the sub-regions where binary mask is 1
         binary_map_SNR = []
@@ -420,7 +428,37 @@ class Hybrid(QThread):
         crit_clust_spars = n_bin/n_largest_cluster >= self.thrs_sparsity
         self.logger.info(f"Cluster sparsity criteria fulfilled? -> {crit_clust_spars}\n")
 
+        criteria_is_met = crit_clust_spars and crit_clust_size and crit_SNR
         # OVERALL
-        self.logger.info(f"ALL criteria fulfilled? -> {crit_clust_spars and crit_clust_size and crit_SNR}\n")
+        self.logger.info(f"ALL criteria fulfilled? -> {criteria_is_met}\n")
 
         # TODO: Initialize tracker
+        if criteria_is_met:
+            self.logger.info(f"ALL criteria met now INITIALIZE TRACKER!")
+            # Construct the box that includes the positive binary map values
+            offset_x = bin_map.shape[1]
+            offset_y = bin_map.shape[0]
+            max_x = 0
+            max_y = 0
+
+            for i in range(bin_map.shape[0]):
+                for j in range(bin_map.shape[1]):
+                    if bin_map[i, j] == 255:
+                        if offset_y > i:
+                            offset_y = i
+                        if offset_x > j:
+                            offset_x = j
+
+                        if max_y < i:
+                            max_y = i
+                        if max_x < j:
+                            max_x = j
+
+            height = max_y - offset_y
+            width = max_x - offset_x
+
+            box = (offset_x*self.patch_size, offset_y*self.patch_size, width*self.patch_size, height*self.patch_size)
+            #print(f"Initialize the tracker with this: {box}")
+
+            self.init_trackers_ROI.emit(current_frame, box)
+            self.is_tracker_inited = True

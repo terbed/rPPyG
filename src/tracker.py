@@ -1,6 +1,6 @@
 import time
 import cv2
-from threading import Thread
+from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QMutex
 import numpy as np
 
 OPENCV_OBJECT_TRACKERS = {
@@ -14,8 +14,11 @@ OPENCV_OBJECT_TRACKERS = {
 }
 
 
-class RoiTracker(Thread):
-    def __init__(self, buffer, tracker_type="mosse", disp=False):
+class RoiTracker(QThread):
+
+    frame_tracked = pyqtSignal(np.ndarray)
+
+    def __init__(self, tracker_type="kcf"):
         """
         Track selected ROI
 
@@ -30,62 +33,53 @@ class RoiTracker(Thread):
                             default: "mosse"
         :param disp: Display tracking? True/False
         """
-        Thread.__init__(self)
+        QThread.__init__(self)
 
-        self.tracker = OPENCV_OBJECT_TRACKERS[tracker_type]()
-        self.buffer = buffer
-        self.disp = disp
+        self.track_type = tracker_type
+        self.frame = None
+        self.mtx = QMutex()
 
-    def init_tracker(self, ROI=None):
+    @pyqtSlot(np.ndarray, tuple)
+    def init_tracker(self, frame, ROI):
         """
         Initialize tracking ROI
 
         :param ROI: A tuple containing ROI parameters: (offset_x, offset_y, width, height)
         :return: starts tracking
         """
-        if ROI is None:
-            time.sleep(5)
-            # select by hand
-            if len(self.buffer.container) > 0:
-                ROI = cv2.selectROI("Frame", self.buffer.container[0], fromCenter=False, showCrosshair=True)
-                print(f"ROI: {ROI}")
+        self.tracker = OPENCV_OBJECT_TRACKERS[self.track_type]()
+        is_inted = self.tracker.init(np.uint8(frame), ROI)
+        (x, y, w, h) = [int(i) for i in ROI]
 
-                self.tracker.init(self.buffer.container[0], ROI)
-
-                self.start()
-            else:
-                print("Container does not have frame in it!")
-
-    def run(self, ROI=None):
-        if ROI is None:
-            time.sleep(1)
-            # select by hand
-            if len(self.buffer.container) > 0:
-                ROI = cv2.selectROI("Frame", self.buffer.container[0], fromCenter=False, showCrosshair=True)
-                print(f"ROI: {ROI}")
-
-                self.tracker.init(np.uint8(self.buffer.container[0]), ROI)
-            else:
-                print("Container does not have frame in it!")
+        tracked_frame = frame.copy()
+        if is_inted:
+            cv2.rectangle(tracked_frame, (x, y), (x + w, y + h), (0, 200, 200), 3)
+            self.frame_tracked.emit(tracked_frame)
         else:
-            self.tracker.init(np.uint8(self.buffer.container[0]), ROI)
+            print("\n\nWARNING!!! Initialization of tracker was not successful!")
+            cv2.rectangle(tracked_frame, (x, y), (x + w, y + h), (0, 0, 256), 3)
+            self.frame_tracked.emit(tracked_frame)
 
-        while True:
-            if len(self.buffer.container) > 0:
-                # grab the new bounding box coordinates of the object
-                (success, box) = self.tracker.update(np.uint8(self.buffer.container[0]))
+    @pyqtSlot(np.ndarray)
+    def on_new_frame(self, src: np.ndarray):
+        self.mtx.lock()
+        self.frame = src.copy()
+        self.mtx.unlock()
 
-                if self.disp:
-                    # check to see if the tracking was a success
-                    if success:
-                        (x, y, w, h) = [int(v) for v in box]
-                        cv2.rectangle(self.buffer.container[0], (x, y), (x + w, y + h), (0, 255, 0), 2)
+        self.start()
 
-                    # show the output frame
-                    cv2.imshow("Frame", self.buffer.container[0])
-                    key = cv2.waitKey(1) & 0xFF
+    def run(self):
+        (success, box) = self.tracker.update(np.uint8(self.frame))
 
-                del self.buffer.container[0]
-            else:
-                print("Container i empty, waiting for 20 ms")
-                time.sleep(20/1000.)
+        if success:
+            self.mtx.lock()
+            tracked_frame = self.frame.copy()
+            self.mtx.unlock()
+
+            (x, y, w, h) = [int(v) for v in box]
+            cv2.rectangle(tracked_frame, (x, y), (x + w, y + h), (209, 0, 206), 3)
+
+            self.frame_tracked.emit(tracked_frame)
+            #print("Tracker is running, signal emitted! ========================================================")
+        else:
+            print("\n\nTracker lost the object!")

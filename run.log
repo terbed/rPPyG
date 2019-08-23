@@ -17965,3 +17965,2280 @@ Window length: 10.24 sec
 
 2019-08-21 17:59:48,921 | Hybrid | INFO | ALL criteria fulfilled? -> False
 
+2019-08-23 14:27:37,640 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:27:37,640 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:28:05,827 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:28:05,827 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:28:54,148 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 14:28:54,219 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 14:28:54,221 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:28:54,229 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 14:28:54,709 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 14:28:54,710 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:28:54,710 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:28:54,711 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:28:54,711 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:28:54,711 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:29:03,743 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 14:29:03,802 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 14:29:03,803 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:29:03,807 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 14:29:05,252 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 14:29:05,252 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:29:05,252 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 14:29:05,252 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:29:05,252 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:05,252 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:29:13,529 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 14:29:13,579 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 14:29:13,581 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:29:13,583 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 14:29:14,631 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 14:29:14,632 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:29:14,633 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 14:29:14,633 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:29:14,633 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:14,633 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:29:23,435 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 14:29:23,488 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 14:29:23,489 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:29:23,491 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 14:29:24,644 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 14:29:24,644 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:29:24,644 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 14:29:24,645 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:29:24,645 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:24,646 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:29:33,687 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 14:29:33,731 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 14:29:33,734 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:29:33,735 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 14:29:35,812 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 14:29:35,814 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:29:35,814 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 14:29:35,815 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:29:35,815 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:35,815 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:29:44,149 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 14:29:44,209 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 14:29:44,209 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:29:44,214 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 14:29:47,954 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 14:29:47,954 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:29:47,954 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 14:29:47,954 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:29:47,954 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:47,955 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:29:55,298 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 14:29:55,343 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 14:29:55,344 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:29:55,349 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 14:29:58,931 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 14:29:58,932 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:29:58,932 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 14:29:58,933 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:29:58,933 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:29:58,933 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:30:07,069 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 14:30:07,196 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 14:30:07,200 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:30:07,203 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 14:30:08,627 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 14:30:08,629 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:30:08,629 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 14:30:08,629 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:30:08,629 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:30:08,629 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:33:06,629 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:33:06,629 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:33:55,181 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 14:33:55,239 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 14:33:55,240 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:33:55,241 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 14:33:55,621 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 14:33:55,622 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:33:55,622 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:33:55,622 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:33:55,622 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:33:55,622 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:34:04,559 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 14:34:04,615 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 14:34:04,618 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:34:04,622 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 14:34:06,073 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 14:34:06,075 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:34:06,075 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 14:34:06,075 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:34:06,075 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:06,075 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:34:14,824 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 14:34:14,874 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 14:34:14,884 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:34:14,887 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 14:34:15,946 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 14:34:15,946 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:34:15,947 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 14:34:15,947 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:34:15,947 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:15,947 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:34:25,023 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 14:34:25,086 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 14:34:25,090 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:34:25,094 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 14:34:26,426 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 14:34:26,427 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:34:26,428 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 14:34:26,428 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:34:26,428 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:26,428 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:34:34,725 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 14:34:34,783 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 14:34:34,784 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:34:34,786 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 14:34:36,930 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 14:34:36,931 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:34:36,931 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 14:34:36,931 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:34:36,933 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:36,933 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:34:36,933 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:34:45,186 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 14:34:45,253 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 14:34:45,254 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:34:45,256 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 14:34:48,041 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 14:34:48,042 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:34:48,043 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 14:34:48,043 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:34:48,043 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:48,043 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:34:48,043 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:34:55,781 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 14:34:55,857 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 14:34:55,861 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:34:55,864 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 14:34:59,114 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 14:34:59,115 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:34:59,115 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 14:34:59,116 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:34:59,116 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:34:59,116 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:34:59,116 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:35:06,342 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 14:35:06,401 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 14:35:06,409 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:35:06,412 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 14:35:07,940 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 14:35:07,941 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:35:07,941 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 14:35:07,942 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:35:07,942 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:35:07,942 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:38:26,359 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:38:26,359 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:39:13,659 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 14:39:13,736 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 14:39:13,736 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:39:13,745 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 14:39:14,113 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 14:39:14,114 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:39:14,114 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:39:14,114 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:39:14,114 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:39:14,114 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:39:22,932 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 14:39:22,993 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 14:39:22,998 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:39:23,000 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 14:39:24,369 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 14:39:24,370 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:39:24,370 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 14:39:24,370 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:39:24,370 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:39:24,371 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:39:32,646 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 14:39:32,693 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 14:39:32,694 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:39:32,697 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 14:39:33,859 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 14:39:33,859 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:39:33,859 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 14:39:33,859 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:39:33,859 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:39:33,859 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:39:42,425 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 14:39:42,476 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 14:39:42,477 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:39:42,479 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 14:39:43,796 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 14:39:43,796 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:39:43,797 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 14:39:43,798 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:39:43,799 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:39:43,799 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:39:52,340 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 14:39:52,386 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 14:39:52,386 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:39:52,387 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 14:39:54,734 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 14:39:54,734 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:39:54,735 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 14:39:54,735 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:39:54,736 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:39:54,736 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:39:54,736 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:40:02,201 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 14:40:02,252 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 14:40:02,252 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:40:02,254 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 14:40:06,044 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 14:40:06,044 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:40:06,046 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 14:40:06,047 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:40:06,047 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:06,047 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:40:06,047 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:40:13,551 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 14:40:13,607 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 14:40:13,609 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:40:13,611 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 14:40:17,268 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 14:40:17,268 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:40:17,269 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 14:40:17,270 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:40:17,270 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:17,271 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:40:17,271 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:40:24,707 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 14:40:24,755 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 14:40:24,755 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:40:24,756 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 14:40:25,955 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 14:40:25,955 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:40:25,955 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 14:40:25,956 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:40:25,956 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:25,957 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:40:33,605 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 14:40:33,655 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 14:40:33,656 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:40:33,657 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 14:40:34,355 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 14:40:34,355 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:40:34,356 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 14:40:34,357 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:40:34,357 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:34,357 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:40:43,206 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 14:40:43,243 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 14:40:43,245 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:40:43,250 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 14:40:43,883 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 14:40:43,884 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:40:43,884 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:40:43,885 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:40:43,885 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:43,885 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:40:53,073 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 14:40:53,127 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 14:40:53,127 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:40:53,129 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 14:40:53,677 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 14:40:53,678 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:40:53,678 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:40:53,679 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:40:53,679 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:40:53,679 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:41:02,877 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 14:41:02,948 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 14:41:02,948 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:41:02,950 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 14:41:03,410 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 14:41:03,411 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:41:03,412 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 14:41:03,412 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:41:03,412 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:41:03,412 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:48:18,682 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:48:18,682 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:49:06,534 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 14:49:06,605 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 14:49:06,606 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:49:06,609 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 14:49:07,130 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 14:49:07,131 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:49:07,131 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:49:07,131 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:49:07,131 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:49:07,132 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:49:16,052 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 14:49:16,103 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 14:49:16,108 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:49:16,111 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 14:49:17,221 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 14:49:17,222 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:49:17,222 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 14:49:17,222 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:49:17,223 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:49:17,223 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:49:25,812 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 14:49:25,889 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 14:49:25,889 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:49:25,891 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 14:49:26,832 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 14:49:26,833 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:49:26,834 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 14:49:26,834 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:49:26,834 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:49:26,834 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:49:35,745 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 14:49:35,801 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 14:49:35,801 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:49:35,805 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 14:49:36,938 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 14:49:36,939 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:49:36,941 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 14:49:36,941 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:49:36,941 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:49:36,941 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:49:45,938 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 14:49:46,000 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 14:49:46,004 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:49:46,005 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 14:49:48,471 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 14:49:48,472 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:49:48,473 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 14:49:48,473 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:49:48,473 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:49:48,473 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:49:48,473 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:49:56,455 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 14:49:56,514 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 14:49:56,514 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:49:56,525 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 14:50:00,410 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 14:50:00,411 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:50:00,412 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 14:50:00,412 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:50:00,413 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:00,413 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:50:00,413 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:50:08,960 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 14:50:09,013 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 14:50:09,013 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:50:09,018 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 14:50:12,546 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 14:50:12,546 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:50:12,548 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 14:50:12,548 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:50:12,548 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:12,548 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:50:12,548 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:50:20,436 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 14:50:20,489 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 14:50:20,492 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:50:20,494 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 14:50:22,092 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 14:50:22,093 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:50:22,094 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 14:50:22,094 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:50:22,095 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:22,095 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:50:30,147 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 14:50:30,228 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 14:50:30,229 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:50:30,230 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 14:50:30,892 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 14:50:30,892 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:50:30,892 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 14:50:30,893 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:50:30,893 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:30,893 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:50:38,656 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 14:50:38,696 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 14:50:38,696 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:50:38,706 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 14:50:39,166 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 14:50:39,166 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:50:39,166 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:50:39,167 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:50:39,167 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:39,167 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:50:48,513 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 14:50:48,573 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 14:50:48,574 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:50:48,575 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 14:50:49,102 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 14:50:49,102 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:50:49,103 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:50:49,104 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:50:49,104 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:50:49,104 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:51:46,804 | Hybrid | INFO | Logger is initialized!
+2019-08-23 14:51:46,804 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 14:52:35,190 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 14:52:35,238 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 14:52:35,238 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:52:35,240 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 14:52:35,735 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 14:52:35,735 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:52:35,736 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:52:35,736 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:52:35,737 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:52:35,737 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:52:44,982 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 14:52:45,044 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 14:52:45,045 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 14:52:45,046 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 14:52:46,522 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 14:52:46,525 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:52:46,526 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 14:52:46,526 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:52:46,526 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:52:46,527 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:52:54,941 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 14:52:55,007 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 14:52:55,009 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:52:55,013 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 14:52:55,969 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 14:52:55,970 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:52:55,970 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 14:52:55,970 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:52:55,971 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:52:55,971 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:53:04,764 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 14:53:04,817 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 14:53:04,821 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:53:04,824 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 14:53:05,784 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 14:53:05,785 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:53:05,786 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 14:53:05,787 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:53:05,787 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:05,787 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:53:14,999 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 14:53:15,053 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 14:53:15,053 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:53:15,055 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 14:53:17,602 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 14:53:17,602 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:53:17,603 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 14:53:17,604 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:53:17,604 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:17,604 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:53:17,604 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:53:26,128 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 14:53:26,175 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 14:53:26,175 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:53:26,176 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 14:53:28,845 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 14:53:28,851 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:53:28,851 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 14:53:28,851 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:53:28,851 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:28,851 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:53:28,852 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:53:36,256 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 14:53:36,297 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 14:53:36,298 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:53:36,300 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 14:53:39,663 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 14:53:39,664 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 14:53:39,665 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 14:53:39,665 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 14:53:39,665 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:39,665 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 14:53:39,665 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 14:53:47,612 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 14:53:47,676 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 14:53:47,676 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:53:47,678 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 14:53:49,007 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 14:53:49,007 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:53:49,009 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 14:53:49,009 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:53:49,010 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:49,010 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:53:57,516 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 14:53:57,584 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 14:53:57,586 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:53:57,588 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 14:53:58,574 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 14:53:58,574 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:53:58,574 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 14:53:58,575 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:53:58,575 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:53:58,575 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:54:07,632 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 14:54:07,706 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 14:54:07,706 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:54:07,711 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 14:54:08,227 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 14:54:08,228 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:54:08,228 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:54:08,228 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:54:08,229 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:54:08,229 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:54:17,323 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 14:54:17,392 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 14:54:17,392 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 14:54:17,394 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 14:54:17,879 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 14:54:17,879 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:54:17,880 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 14:54:17,880 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:54:17,880 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:54:17,880 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 14:54:27,227 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 14:54:27,285 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 14:54:27,289 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 14:54:27,292 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 14:54:27,798 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 14:54:27,799 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 14:54:27,799 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 14:54:27,799 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 14:54:27,799 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 14:54:27,799 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:04:28,859 | Hybrid | INFO | Logger is initialized!
+2019-08-23 15:04:28,859 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 15:05:24,806 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 15:05:25,064 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 15:05:25,069 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 15:05:25,113 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 15:05:27,349 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 15:05:27,351 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:05:27,353 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 15:05:27,355 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:05:27,357 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:05:27,359 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:05:33,359 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 51
+2019-08-23 15:05:33,536 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 52
+2019-08-23 15:05:33,713 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 53
+2019-08-23 15:05:33,891 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 54
+2019-08-23 15:05:34,068 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 55
+2019-08-23 15:05:34,245 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 56
+2019-08-23 15:05:34,423 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 57
+2019-08-23 15:05:34,599 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 58
+2019-08-23 15:05:34,776 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 59
+2019-08-23 15:05:34,953 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 60
+2019-08-23 15:05:35,130 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 61
+2019-08-23 15:05:35,306 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 62
+2019-08-23 15:05:35,485 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 63
+2019-08-23 15:05:35,662 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 64
+2019-08-23 15:05:35,839 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 65
+2019-08-23 15:05:36,017 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 66
+2019-08-23 15:05:36,197 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 67
+2019-08-23 15:05:36,376 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 68
+2019-08-23 15:05:36,555 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 69
+2019-08-23 15:05:36,735 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 70
+2019-08-23 15:05:36,914 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 71
+2019-08-23 15:05:37,093 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 72
+2019-08-23 15:05:37,273 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 73
+2019-08-23 15:05:37,452 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 74
+2019-08-23 15:05:37,631 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 75
+2019-08-23 15:05:37,809 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 76
+2019-08-23 15:05:37,989 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 77
+2019-08-23 15:05:38,167 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 78
+2019-08-23 15:05:38,347 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 79
+2019-08-23 15:05:38,527 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 80
+2019-08-23 15:05:38,714 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 81
+2019-08-23 15:05:38,918 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 82
+2019-08-23 15:05:39,112 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 83
+2019-08-23 15:05:39,314 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 84
+2019-08-23 15:05:39,502 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 85
+2019-08-23 15:05:39,703 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 86
+2019-08-23 15:05:39,905 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 87
+2019-08-23 15:05:40,113 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 88
+2019-08-23 15:05:40,302 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 89
+2019-08-23 15:05:40,499 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 90
+2019-08-23 15:05:40,702 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 91
+2019-08-23 15:05:40,864 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 92
+2019-08-23 15:05:41,064 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 93
+2019-08-23 15:05:41,252 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 94
+2019-08-23 15:05:41,467 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 95
+2019-08-23 15:05:41,643 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 96
+2019-08-23 15:05:41,820 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 97
+2019-08-23 15:05:41,996 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 98
+2019-08-23 15:05:42,173 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 99
+2019-08-23 15:05:42,350 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 100
+2019-08-23 15:05:42,527 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 101
+2019-08-23 15:05:42,704 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 102
+2019-08-23 15:05:42,882 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 103
+2019-08-23 15:05:43,060 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 104
+2019-08-23 15:05:43,237 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 105
+2019-08-23 15:05:43,414 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 106
+2019-08-23 15:05:43,590 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 107
+2019-08-23 15:05:43,767 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 108
+2019-08-23 15:05:43,945 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 109
+2019-08-23 15:05:44,123 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 110
+2019-08-23 15:05:44,300 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 111
+2019-08-23 15:05:44,477 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 112
+2019-08-23 15:05:44,654 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 113
+2019-08-23 15:05:44,832 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 114
+2019-08-23 15:05:45,010 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 115
+2019-08-23 15:05:45,187 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 116
+2019-08-23 15:05:45,364 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 117
+2019-08-23 15:05:45,541 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 118
+2019-08-23 15:05:45,718 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 119
+2019-08-23 15:05:45,895 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 120
+2019-08-23 15:05:46,072 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 121
+2019-08-23 15:05:46,249 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 122
+2019-08-23 15:05:46,427 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 123
+2019-08-23 15:05:46,604 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 124
+2019-08-23 15:05:46,781 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 125
+2019-08-23 15:05:46,960 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 126
+2019-08-23 15:05:47,137 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 127
+2019-08-23 15:05:47,314 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 128
+2019-08-23 15:05:47,491 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 129
+2019-08-23 15:05:47,669 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 130
+2019-08-23 15:05:47,846 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 131
+2019-08-23 15:05:48,024 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 132
+2019-08-23 15:05:48,201 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 133
+2019-08-23 15:05:48,378 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 134
+2019-08-23 15:05:48,555 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 135
+2019-08-23 15:05:48,733 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 136
+2019-08-23 15:05:48,910 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 137
+2019-08-23 15:05:49,090 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 138
+2019-08-23 15:05:49,267 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 139
+2019-08-23 15:05:49,444 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 140
+2019-08-23 15:05:49,621 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 141
+2019-08-23 15:05:49,798 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 142
+2019-08-23 15:05:49,975 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 143
+2019-08-23 15:05:50,152 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 144
+2019-08-23 15:05:50,329 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 145
+2019-08-23 15:05:50,507 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 146
+2019-08-23 15:05:50,685 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 147
+2019-08-23 15:05:50,863 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 148
+2019-08-23 15:05:51,042 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 149
+2019-08-23 15:05:51,220 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 150
+2019-08-23 15:05:51,398 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 151
+2019-08-23 15:05:51,576 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 152
+2019-08-23 15:05:51,754 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 153
+2019-08-23 15:05:51,932 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 154
+2019-08-23 15:05:52,110 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 155
+2019-08-23 15:05:52,287 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 156
+2019-08-23 15:05:52,464 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 157
+2019-08-23 15:05:52,641 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 158
+2019-08-23 15:05:52,819 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 159
+2019-08-23 15:05:52,995 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 160
+2019-08-23 15:05:53,172 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 161
+2019-08-23 15:05:53,349 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 162
+2019-08-23 15:05:53,526 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 163
+2019-08-23 15:05:53,702 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 164
+2019-08-23 15:05:53,879 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 165
+2019-08-23 15:05:54,056 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 166
+2019-08-23 15:05:54,239 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 167
+2019-08-23 15:05:54,416 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 168
+2019-08-23 15:05:54,598 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 169
+2019-08-23 15:05:54,778 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 170
+2019-08-23 15:05:54,957 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 171
+2019-08-23 15:05:55,137 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 172
+2019-08-23 15:05:55,315 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 173
+2019-08-23 15:05:55,494 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 174
+2019-08-23 15:05:55,673 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 175
+2019-08-23 15:05:55,851 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 176
+2019-08-23 15:05:56,030 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 177
+2019-08-23 15:05:56,209 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 178
+2019-08-23 15:05:56,385 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 179
+2019-08-23 15:05:56,562 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 180
+2019-08-23 15:05:56,739 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 181
+2019-08-23 15:05:56,917 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 182
+2019-08-23 15:05:57,094 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 183
+2019-08-23 15:05:57,273 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 184
+2019-08-23 15:05:57,451 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 185
+2019-08-23 15:05:57,639 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 186
+2019-08-23 15:05:57,824 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 187
+2019-08-23 15:05:57,994 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 188
+2019-08-23 15:05:58,174 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 189
+2019-08-23 15:05:58,371 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 190
+2019-08-23 15:05:58,549 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 191
+2019-08-23 15:05:58,728 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 192
+2019-08-23 15:05:58,907 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 193
+2019-08-23 15:05:59,087 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 194
+2019-08-23 15:05:59,270 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 195
+2019-08-23 15:05:59,450 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 196
+2019-08-23 15:05:59,631 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 197
+2019-08-23 15:05:59,810 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 198
+2019-08-23 15:05:59,988 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 199
+2019-08-23 15:06:00,168 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 200
+2019-08-23 15:06:00,347 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 201
+2019-08-23 15:06:00,526 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 202
+2019-08-23 15:06:00,707 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 203
+2019-08-23 15:06:00,886 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 204
+2019-08-23 15:06:01,066 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 205
+2019-08-23 15:06:01,245 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 206
+2019-08-23 15:06:01,424 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 207
+2019-08-23 15:06:01,603 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 208
+2019-08-23 15:06:01,782 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 209
+2019-08-23 15:06:01,961 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 210
+2019-08-23 15:06:02,138 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 211
+2019-08-23 15:06:02,315 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 212
+2019-08-23 15:06:02,493 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 213
+2019-08-23 15:06:02,672 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 214
+2019-08-23 15:06:02,851 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 215
+2019-08-23 15:06:03,030 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 216
+2019-08-23 15:06:03,208 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 217
+2019-08-23 15:06:03,387 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 218
+2019-08-23 15:06:03,566 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 219
+2019-08-23 15:06:03,743 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 220
+2019-08-23 15:06:03,921 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 221
+2019-08-23 15:06:04,102 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 222
+2019-08-23 15:06:04,284 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 223
+2019-08-23 15:06:04,463 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 224
+2019-08-23 15:06:04,642 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 225
+2019-08-23 15:06:04,822 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 226
+2019-08-23 15:06:05,001 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 227
+2019-08-23 15:06:05,180 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 228
+2019-08-23 15:06:05,362 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 229
+2019-08-23 15:06:05,541 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 230
+2019-08-23 15:06:05,720 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 231
+2019-08-23 15:06:05,901 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 232
+2019-08-23 15:06:06,081 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 233
+2019-08-23 15:06:06,260 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 234
+2019-08-23 15:06:06,442 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 235
+2019-08-23 15:06:06,620 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 236
+2019-08-23 15:06:06,800 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 237
+2019-08-23 15:06:06,981 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 238
+2019-08-23 15:06:07,158 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 239
+2019-08-23 15:06:07,335 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 240
+2019-08-23 15:06:07,515 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 241
+2019-08-23 15:06:07,694 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 242
+2019-08-23 15:06:07,874 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 243
+2019-08-23 15:06:08,054 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 244
+2019-08-23 15:06:08,232 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 245
+2019-08-23 15:06:08,410 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 246
+2019-08-23 15:06:08,588 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 247
+2019-08-23 15:06:08,767 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 248
+2019-08-23 15:06:08,945 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 249
+2019-08-23 15:06:09,122 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 250
+2019-08-23 15:06:09,307 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 251
+2019-08-23 15:06:09,486 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 252
+2019-08-23 15:06:09,667 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 253
+2019-08-23 15:06:09,846 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 254
+2019-08-23 15:06:10,027 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 255
+2019-08-23 15:06:10,207 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 256
+2019-08-23 15:06:10,390 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 257
+2019-08-23 15:06:10,568 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 258
+2019-08-23 15:06:10,749 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 259
+2019-08-23 15:06:10,928 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 260
+2019-08-23 15:06:11,113 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 261
+2019-08-23 15:06:11,292 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 262
+2019-08-23 15:06:11,473 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 263
+2019-08-23 15:06:11,653 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 264
+2019-08-23 15:06:11,830 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 265
+2019-08-23 15:06:12,008 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 266
+2019-08-23 15:06:12,190 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 267
+2019-08-23 15:06:12,369 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 268
+2019-08-23 15:06:12,560 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 269
+2019-08-23 15:06:12,741 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 270
+2019-08-23 15:06:12,918 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 271
+2019-08-23 15:06:13,098 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 272
+2019-08-23 15:06:13,278 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 273
+2019-08-23 15:06:13,462 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 274
+2019-08-23 15:06:13,642 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 275
+2019-08-23 15:06:13,828 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 276
+2019-08-23 15:06:14,022 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 277
+2019-08-23 15:06:14,207 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 278
+2019-08-23 15:06:14,387 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 279
+2019-08-23 15:06:14,569 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 280
+2019-08-23 15:06:14,749 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 281
+2019-08-23 15:06:14,929 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 282
+2019-08-23 15:06:15,109 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 283
+2019-08-23 15:06:15,288 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 284
+2019-08-23 15:06:15,469 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 285
+2019-08-23 15:06:15,649 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 286
+2019-08-23 15:06:15,829 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 287
+2019-08-23 15:06:16,009 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 288
+2019-08-23 15:06:16,189 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 289
+2019-08-23 15:06:16,370 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 290
+2019-08-23 15:06:16,550 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 291
+2019-08-23 15:06:16,730 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 292
+2019-08-23 15:06:16,911 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 293
+2019-08-23 15:06:17,090 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 294
+2019-08-23 15:06:17,267 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 295
+2019-08-23 15:06:17,446 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 296
+2019-08-23 15:06:17,622 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 297
+2019-08-23 15:06:17,800 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 298
+2019-08-23 15:06:17,980 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 299
+2019-08-23 15:06:18,160 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 300
+2019-08-23 15:06:18,344 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 301
+2019-08-23 15:06:18,525 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 302
+2019-08-23 15:06:18,706 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 303
+2019-08-23 15:06:18,887 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 304
+2019-08-23 15:06:19,068 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 305
+2019-08-23 15:06:19,260 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 306
+2019-08-23 15:06:19,462 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 307
+2019-08-23 15:06:19,645 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 308
+2019-08-23 15:06:19,840 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 309
+2019-08-23 15:06:20,048 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 310
+2019-08-23 15:06:20,235 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 311
+2019-08-23 15:06:20,437 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 312
+2019-08-23 15:06:20,656 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 313
+2019-08-23 15:06:20,836 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 314
+2019-08-23 15:06:21,019 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 315
+2019-08-23 15:06:21,223 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 316
+2019-08-23 15:06:21,409 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 317
+2019-08-23 15:06:21,609 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 318
+2019-08-23 15:06:21,790 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 319
+2019-08-23 15:06:21,972 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 320
+2019-08-23 15:06:22,128 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 321
+2019-08-23 15:06:22,311 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 322
+2019-08-23 15:06:22,506 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 323
+2019-08-23 15:06:22,707 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 324
+2019-08-23 15:06:22,886 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 325
+2019-08-23 15:06:23,068 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 326
+2019-08-23 15:06:23,248 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 327
+2019-08-23 15:06:23,427 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 328
+2019-08-23 15:06:23,606 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 329
+2019-08-23 15:06:23,785 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 330
+2019-08-23 15:06:23,964 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 331
+2019-08-23 15:06:24,146 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 332
+2019-08-23 15:06:24,328 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 333
+2019-08-23 15:06:24,517 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 334
+2019-08-23 15:06:24,698 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 335
+2019-08-23 15:06:24,877 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 336
+2019-08-23 15:06:25,058 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 337
+2019-08-23 15:06:25,241 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 338
+2019-08-23 15:06:25,423 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 339
+2019-08-23 15:06:25,607 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 340
+2019-08-23 15:06:25,786 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 341
+2019-08-23 15:06:25,971 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 342
+2019-08-23 15:06:26,166 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 343
+2019-08-23 15:06:26,349 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 344
+2019-08-23 15:06:26,539 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 345
+2019-08-23 15:06:26,729 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 346
+2019-08-23 15:06:26,931 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 347
+2019-08-23 15:06:27,117 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 348
+2019-08-23 15:06:27,302 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 349
+2019-08-23 15:06:27,488 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 350
+2019-08-23 15:06:27,674 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 351
+2019-08-23 15:06:27,853 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 352
+2019-08-23 15:06:28,034 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 353
+2019-08-23 15:06:28,219 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 354
+2019-08-23 15:06:28,413 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 355
+2019-08-23 15:06:28,594 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 356
+2019-08-23 15:06:28,774 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 357
+2019-08-23 15:06:28,954 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 358
+2019-08-23 15:06:29,136 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 359
+2019-08-23 15:06:29,320 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 360
+2019-08-23 15:06:29,500 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 361
+2019-08-23 15:06:29,684 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 362
+2019-08-23 15:06:29,864 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 363
+2019-08-23 15:06:30,045 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 364
+2019-08-23 15:06:30,225 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 365
+2019-08-23 15:06:30,405 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 366
+2019-08-23 15:06:30,586 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 367
+2019-08-23 15:06:30,766 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 368
+2019-08-23 15:06:30,946 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 369
+2019-08-23 15:06:31,126 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 370
+2019-08-23 15:06:31,307 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 371
+2019-08-23 15:06:31,492 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 372
+2019-08-23 15:06:31,677 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 373
+2019-08-23 15:06:31,862 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 374
+2019-08-23 15:06:32,047 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 375
+2019-08-23 15:06:32,231 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 376
+2019-08-23 15:06:32,416 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 377
+2019-08-23 15:06:32,603 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 378
+2019-08-23 15:06:32,788 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 379
+2019-08-23 15:06:32,973 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 380
+2019-08-23 15:06:33,157 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 381
+2019-08-23 15:06:33,342 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 382
+2019-08-23 15:06:33,527 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 383
+2019-08-23 15:06:33,712 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 384
+2019-08-23 15:06:33,897 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 385
+2019-08-23 15:06:34,082 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 386
+2019-08-23 15:06:34,267 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 387
+2019-08-23 15:06:34,451 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 388
+2019-08-23 15:06:34,635 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 389
+2019-08-23 15:06:34,820 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 390
+2019-08-23 15:06:35,006 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 391
+2019-08-23 15:06:35,193 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 392
+2019-08-23 15:06:35,375 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 393
+2019-08-23 15:06:35,558 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 394
+2019-08-23 15:06:35,740 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 395
+2019-08-23 15:06:35,922 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 396
+2019-08-23 15:06:36,104 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 397
+2019-08-23 15:06:36,287 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 398
+2019-08-23 15:06:36,469 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 399
+2019-08-23 15:06:36,651 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 400
+2019-08-23 15:06:36,834 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 401
+2019-08-23 15:06:37,016 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 402
+2019-08-23 15:06:37,199 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 403
+2019-08-23 15:06:37,382 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 404
+2019-08-23 15:06:37,565 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 405
+2019-08-23 15:06:37,747 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 406
+2019-08-23 15:06:37,929 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 407
+2019-08-23 15:06:38,113 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 408
+2019-08-23 15:06:38,295 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 409
+2019-08-23 15:06:38,478 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 410
+2019-08-23 15:06:38,660 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 411
+2019-08-23 15:06:38,843 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 412
+2019-08-23 15:06:39,029 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 413
+2019-08-23 15:06:39,211 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 414
+2019-08-23 15:06:39,393 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 415
+2019-08-23 15:06:39,573 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 416
+2019-08-23 15:06:39,754 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 417
+2019-08-23 15:06:39,934 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 418
+2019-08-23 15:06:40,114 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 419
+2019-08-23 15:06:40,294 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 420
+2019-08-23 15:06:40,474 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 421
+2019-08-23 15:06:40,669 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 422
+2019-08-23 15:06:40,866 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 423
+2019-08-23 15:06:41,046 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 424
+2019-08-23 15:06:41,227 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 425
+2019-08-23 15:06:41,407 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 426
+2019-08-23 15:06:41,586 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 427
+2019-08-23 15:06:41,767 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 428
+2019-08-23 15:06:41,947 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 429
+2019-08-23 15:06:42,127 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 430
+2019-08-23 15:06:42,307 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 431
+2019-08-23 15:06:42,487 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 432
+2019-08-23 15:06:42,667 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 433
+2019-08-23 15:06:42,847 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 434
+2019-08-23 15:06:43,027 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 435
+2019-08-23 15:06:43,207 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 436
+2019-08-23 15:06:43,385 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 437
+2019-08-23 15:06:43,563 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 438
+2019-08-23 15:06:43,741 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 439
+2019-08-23 15:06:43,919 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 440
+2019-08-23 15:06:44,098 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 441
+2019-08-23 15:06:44,276 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 442
+2019-08-23 15:06:44,455 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 443
+2019-08-23 15:06:44,634 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 444
+2019-08-23 15:06:44,813 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 445
+2019-08-23 15:06:44,993 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 446
+2019-08-23 15:06:45,172 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 447
+2019-08-23 15:06:45,351 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 448
+2019-08-23 15:06:45,530 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 449
+2019-08-23 15:06:45,707 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 450
+2019-08-23 15:06:45,885 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 451
+2019-08-23 15:06:46,064 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 452
+2019-08-23 15:06:46,243 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 453
+2019-08-23 15:06:46,422 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 454
+2019-08-23 15:06:46,603 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 455
+2019-08-23 15:06:46,781 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 456
+2019-08-23 15:06:46,961 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 457
+2019-08-23 15:06:47,141 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 458
+2019-08-23 15:06:47,320 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 459
+2019-08-23 15:06:47,500 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 460
+2019-08-23 15:06:47,680 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 461
+2019-08-23 15:06:47,860 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 462
+2019-08-23 15:06:48,043 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 463
+2019-08-23 15:06:48,222 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 464
+2019-08-23 15:06:48,402 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 465
+2019-08-23 15:06:48,583 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 466
+2019-08-23 15:06:48,763 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 467
+2019-08-23 15:06:48,943 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 468
+2019-08-23 15:06:49,123 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 469
+2019-08-23 15:06:49,303 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 470
+2019-08-23 15:06:49,483 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 471
+2019-08-23 15:06:49,664 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 472
+2019-08-23 15:06:49,844 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 473
+2019-08-23 15:06:50,024 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 474
+2019-08-23 15:06:50,205 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 475
+2019-08-23 15:06:50,385 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 476
+2019-08-23 15:06:50,566 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 477
+2019-08-23 15:06:50,746 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 478
+2019-08-23 15:06:50,926 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 479
+2019-08-23 15:06:51,106 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 480
+2019-08-23 15:06:51,286 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 481
+2019-08-23 15:06:51,464 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 482
+2019-08-23 15:06:51,642 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 483
+2019-08-23 15:06:51,821 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 484
+2019-08-23 15:06:52,001 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 485
+2019-08-23 15:06:52,180 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 486
+2019-08-23 15:06:52,359 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 487
+2019-08-23 15:06:52,539 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 488
+2019-08-23 15:06:52,718 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 489
+2019-08-23 15:06:52,898 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 490
+2019-08-23 15:06:53,077 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 491
+2019-08-23 15:06:53,256 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 492
+2019-08-23 15:06:53,435 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 493
+2019-08-23 15:06:53,612 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 494
+2019-08-23 15:06:53,789 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 495
+2019-08-23 15:06:53,967 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 496
+2019-08-23 15:06:54,146 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 497
+2019-08-23 15:06:54,325 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 498
+2019-08-23 15:06:54,504 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 499
+2019-08-23 15:06:54,682 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 500
+2019-08-23 15:06:54,859 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 501
+2019-08-23 15:06:55,038 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 502
+2019-08-23 15:06:55,215 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 503
+2019-08-23 15:06:55,391 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 504
+2019-08-23 15:06:55,569 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 505
+2019-08-23 15:06:55,745 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 506
+2019-08-23 15:06:55,922 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 507
+2019-08-23 15:06:56,099 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 508
+2019-08-23 15:06:56,280 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 509
+2019-08-23 15:06:56,457 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 510
+2019-08-23 15:06:56,635 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 511
+2019-08-23 15:06:56,812 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 512
+2019-08-23 15:06:56,989 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 513
+2019-08-23 15:06:57,170 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 514
+2019-08-23 15:06:57,349 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 515
+2019-08-23 15:06:57,532 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 516
+2019-08-23 15:06:57,711 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 517
+2019-08-23 15:06:57,895 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 518
+2019-08-23 15:06:58,072 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 519
+2019-08-23 15:06:58,251 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 520
+2019-08-23 15:06:58,432 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 521
+2019-08-23 15:06:58,615 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 522
+2019-08-23 15:06:58,798 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 523
+2019-08-23 15:06:58,978 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 524
+2019-08-23 15:06:59,158 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 525
+2019-08-23 15:06:59,338 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 526
+2019-08-23 15:06:59,518 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 527
+2019-08-23 15:06:59,698 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 528
+2019-08-23 15:06:59,878 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 529
+2019-08-23 15:07:00,058 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 530
+2019-08-23 15:07:00,238 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 531
+2019-08-23 15:07:00,418 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 532
+2019-08-23 15:07:00,598 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 533
+2019-08-23 15:07:00,778 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 534
+2019-08-23 15:07:00,958 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 535
+2019-08-23 15:07:01,138 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 536
+2019-08-23 15:07:01,318 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 537
+2019-08-23 15:07:01,498 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 538
+2019-08-23 15:07:01,679 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 539
+2019-08-23 15:07:01,859 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 540
+2019-08-23 15:07:02,039 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 541
+2019-08-23 15:07:02,219 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 542
+2019-08-23 15:07:02,399 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 543
+2019-08-23 15:07:02,579 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 544
+2019-08-23 15:07:02,759 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 545
+2019-08-23 15:07:02,939 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 546
+2019-08-23 15:07:03,120 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 547
+2019-08-23 15:07:03,300 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 548
+2019-08-23 15:07:03,481 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 549
+2019-08-23 15:07:03,663 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 550
+2019-08-23 15:07:03,861 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 551
+2019-08-23 15:07:04,047 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 552
+2019-08-23 15:07:04,247 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 553
+2019-08-23 15:07:04,431 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 554
+2019-08-23 15:07:04,611 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 555
+2019-08-23 15:07:04,800 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 556
+2019-08-23 15:07:05,001 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 557
+2019-08-23 15:07:05,183 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 558
+2019-08-23 15:07:05,366 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 559
+2019-08-23 15:07:05,548 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 560
+2019-08-23 15:07:05,730 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 561
+2019-08-23 15:07:05,912 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 562
+2019-08-23 15:07:06,094 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 563
+2019-08-23 15:07:06,277 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 564
+2019-08-23 15:07:06,459 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 565
+2019-08-23 15:07:06,642 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 566
+2019-08-23 15:07:06,824 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 567
+2019-08-23 15:07:07,007 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 568
+2019-08-23 15:07:07,190 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 569
+2019-08-23 15:07:07,371 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 570
+2019-08-23 15:07:07,551 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 571
+2019-08-23 15:07:07,732 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 572
+2019-08-23 15:07:07,912 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 573
+2019-08-23 15:07:08,092 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 574
+2019-08-23 15:07:08,272 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 575
+2019-08-23 15:07:08,452 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 576
+2019-08-23 15:07:08,632 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 577
+2019-08-23 15:07:08,812 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 578
+2019-08-23 15:07:08,992 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 579
+2019-08-23 15:07:09,172 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 580
+2019-08-23 15:07:09,352 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 581
+2019-08-23 15:07:09,532 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 582
+2019-08-23 15:07:09,714 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 583
+2019-08-23 15:07:09,894 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 584
+2019-08-23 15:07:10,076 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 585
+2019-08-23 15:07:10,255 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 586
+2019-08-23 15:07:10,437 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 587
+2019-08-23 15:07:10,619 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 588
+2019-08-23 15:07:10,801 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 589
+2019-08-23 15:07:10,982 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 590
+2019-08-23 15:07:11,162 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 591
+2019-08-23 15:07:11,342 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 592
+2019-08-23 15:07:11,520 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 593
+2019-08-23 15:07:11,698 | Hybrid | WARNING | Large buffer size! Decrease frame loading speed! Buffer size: 594
+2019-08-23 15:09:40,803 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 15:09:40,945 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 15:09:40,947 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 15:09:40,957 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 15:09:45,387 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 15:09:45,389 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:09:45,391 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 15:09:45,392 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:09:45,393 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:09:45,394 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:10:04,374 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 15:10:04,516 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 15:10:04,518 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:10:04,528 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 15:10:07,910 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 15:10:07,912 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:10:07,913 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 15:10:07,914 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 15:10:07,915 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:10:07,917 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:10:14,244 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 15:10:14,387 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 15:10:14,388 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:10:14,398 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 15:10:18,712 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 15:10:18,713 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:10:18,714 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 15:10:18,714 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 15:10:18,715 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:10:18,716 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:10:30,785 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 15:10:30,922 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 15:10:30,923 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:10:30,932 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 15:10:38,275 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 15:10:38,276 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 15:10:38,277 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 15:10:38,278 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 15:10:38,279 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:10:38,280 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 15:10:41,684 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 15:11:28,951 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 15:11:29,081 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 15:11:29,084 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:11:29,096 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 15:11:41,189 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 15:11:41,191 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 15:11:41,192 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 15:11:41,193 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 15:11:41,195 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:11:41,196 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 15:11:55,284 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 15:12:01,619 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 15:12:01,774 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 15:12:01,779 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 15:12:01,788 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 15:12:14,087 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 15:12:14,088 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 15:12:14,089 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 15:12:14,090 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 15:12:14,091 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:12:14,092 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 15:12:25,737 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 15:12:32,383 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 15:12:32,532 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 15:12:32,535 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:12:32,547 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 15:12:37,752 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 15:12:37,754 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:12:37,757 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 15:12:37,759 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:12:37,760 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:12:37,763 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:12:46,161 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 15:12:46,275 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 15:12:46,277 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 15:12:46,285 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 15:12:49,000 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 15:12:49,001 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:12:49,002 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 15:12:49,003 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:12:49,004 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:12:49,004 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:13:09,346 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 15:13:09,468 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 15:13:09,470 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 15:13:09,478 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 15:13:11,222 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 15:13:11,224 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:13:11,225 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 15:13:11,226 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:13:11,228 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:13:11,229 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 15:13:22,511 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 15:13:22,626 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 15:13:22,627 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 15:13:22,635 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 15:13:24,321 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 15:13:24,322 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 15:13:24,323 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 15:13:24,324 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 15:13:24,324 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 15:13:24,325 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:55:56,589 | Hybrid | INFO | Logger is initialized!
+2019-08-23 16:55:56,589 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 16:56:44,628 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 16:56:44,679 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 16:56:44,680 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 16:56:44,695 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 16:56:45,145 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 16:56:45,147 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:56:45,147 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 16:56:45,147 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:56:45,147 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:56:45,147 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:56:54,229 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 16:56:54,269 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 16:56:54,270 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 16:56:54,271 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 16:56:55,282 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 16:56:55,283 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:56:55,283 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 16:56:55,283 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:56:55,283 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:56:55,283 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:57:04,112 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 16:57:04,166 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 16:57:04,174 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:57:04,176 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 16:57:04,898 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 16:57:04,899 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:57:04,899 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 16:57:04,900 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 16:57:04,900 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:57:04,900 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:57:13,962 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 16:57:14,026 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 16:57:14,027 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:57:14,030 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 16:57:15,017 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 16:57:15,018 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:57:15,018 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 16:57:15,018 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 16:57:15,018 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:57:15,019 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:57:23,621 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 16:57:23,666 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 16:57:23,667 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:57:23,669 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 16:57:26,139 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 16:57:26,140 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 16:57:26,141 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 16:57:26,141 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 16:57:26,141 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:57:26,142 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 16:57:26,142 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 16:57:35,521 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 16:57:35,581 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 16:57:35,581 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:57:35,582 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 16:57:39,279 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 16:57:39,281 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 16:57:39,281 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 16:57:39,281 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 16:57:39,281 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:57:39,281 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 16:57:39,282 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 16:57:48,676 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 16:57:48,730 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 16:57:48,731 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 16:57:48,736 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 16:57:52,311 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 16:57:52,311 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 16:57:52,312 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 16:57:52,313 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 16:57:52,313 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:57:52,314 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 16:57:52,314 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 16:58:01,352 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 16:58:01,420 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 16:58:01,421 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:58:01,425 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 16:58:02,851 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 16:58:02,853 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:58:02,854 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 16:58:02,854 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:58:02,854 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:58:02,854 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:58:11,605 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 16:58:11,657 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 16:58:11,658 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 16:58:11,660 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 16:58:12,624 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 16:58:12,624 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:58:12,625 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 16:58:12,626 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:58:12,626 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:58:12,626 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:58:21,753 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 16:58:21,808 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 16:58:21,810 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 16:58:21,812 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 16:58:22,373 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 16:58:22,374 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:58:22,374 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 16:58:22,374 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:58:22,375 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:58:22,376 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:58:31,671 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 16:58:31,725 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 16:58:31,728 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 16:58:31,731 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 16:58:32,166 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 16:58:32,166 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:58:32,166 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 16:58:32,167 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:58:32,168 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:58:32,168 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 16:58:41,849 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 16:58:41,899 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 16:58:41,906 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 16:58:41,910 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 16:58:42,481 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 16:58:42,482 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 16:58:42,482 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 16:58:42,483 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 16:58:42,484 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 16:58:42,484 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:01:30,593 | Hybrid | INFO | Logger is initialized!
+2019-08-23 17:01:30,594 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 17:02:18,832 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 17:02:18,886 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 17:02:18,887 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:02:18,889 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 17:02:19,384 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 17:02:19,385 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:02:19,385 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:02:19,385 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:02:19,385 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:02:19,385 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:02:28,560 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 17:02:28,605 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 17:02:28,606 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:02:28,610 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 17:02:30,103 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 17:02:30,104 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:02:30,104 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 17:02:30,104 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:02:30,104 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:02:30,104 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:02:38,564 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 17:02:38,630 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 17:02:38,635 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:02:38,640 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 17:02:39,712 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 17:02:39,713 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:02:39,713 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 17:02:39,713 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:02:39,713 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:02:39,713 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:02:48,346 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 17:02:48,408 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 17:02:48,408 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:02:48,411 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 17:02:49,606 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 17:02:49,607 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:02:49,609 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 17:02:49,610 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:02:49,610 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:02:49,610 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:02:58,515 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 17:02:58,559 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 17:02:58,560 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:02:58,564 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 17:03:01,160 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 17:03:01,162 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:03:01,162 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 17:03:01,163 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:03:01,163 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:01,163 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:03:01,163 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:03:10,069 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 17:03:10,134 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 17:03:10,134 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:03:10,136 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 17:03:13,957 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 17:03:13,957 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:03:13,958 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 17:03:13,958 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:03:13,958 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:13,958 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:03:13,958 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:03:22,484 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 17:03:22,534 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 17:03:22,534 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:03:22,536 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 17:03:26,110 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 17:03:26,111 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:03:26,111 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 17:03:26,111 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:03:26,112 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:26,112 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:03:26,112 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:03:35,317 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 17:03:35,372 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 17:03:35,377 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:03:35,380 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 17:03:36,628 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 17:03:36,629 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:03:36,630 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 17:03:36,630 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:03:36,630 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:36,630 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:03:46,071 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 17:03:46,134 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 17:03:46,139 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:03:46,142 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 17:03:46,848 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 17:03:46,848 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:03:46,848 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 17:03:46,848 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:03:46,848 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:46,848 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:03:55,727 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 17:03:55,806 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 17:03:55,806 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:03:55,808 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 17:03:56,256 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 17:03:56,256 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:03:56,257 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:03:56,257 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:03:56,257 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:03:56,257 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:04:05,566 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 17:04:05,633 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 17:04:05,636 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:04:05,639 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 17:04:06,081 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 17:04:06,083 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:04:06,083 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:04:06,083 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:04:06,084 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:04:06,084 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:04:15,915 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 17:04:15,973 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 17:04:15,974 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:04:15,977 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 17:04:16,513 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 17:04:16,514 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:04:16,515 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 17:04:16,515 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:04:16,515 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:04:16,515 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:07:08,801 | Hybrid | INFO | Logger is initialized!
+2019-08-23 17:07:08,801 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 17:07:31,304 | Hybrid | INFO | Logger is initialized!
+2019-08-23 17:07:31,304 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 17:08:19,470 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 17:08:19,539 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 17:08:19,539 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:08:19,541 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 17:08:19,999 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 17:08:20,000 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:08:20,000 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:08:20,000 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:08:20,000 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:08:20,000 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:08:29,195 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 17:08:29,246 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 17:08:29,246 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:08:29,253 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 17:08:30,295 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 17:08:30,295 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:08:30,295 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 17:08:30,295 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:08:30,295 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:08:30,295 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:08:38,802 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 17:08:38,831 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 17:08:38,835 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:08:38,837 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 17:08:39,778 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 17:08:39,779 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:08:39,780 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 17:08:39,780 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:08:39,780 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:08:39,780 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:08:48,438 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 17:08:48,483 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 17:08:48,484 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:08:48,485 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 17:08:49,735 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 17:08:49,739 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:08:49,739 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 17:08:49,739 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:08:49,740 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:08:49,740 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:08:58,292 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 17:08:58,352 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 17:08:58,355 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:08:58,357 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 17:09:00,680 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 17:09:00,681 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:09:00,681 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 17:09:00,681 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:09:00,681 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:09:00,681 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:09:00,681 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:09:09,781 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 17:09:09,844 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 17:09:09,844 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:09:09,846 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 17:09:13,637 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 17:09:13,639 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:09:13,639 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 17:09:13,639 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:09:13,639 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:09:13,640 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:09:13,640 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:09:22,530 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 17:09:22,578 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 17:09:22,579 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:09:22,581 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 17:09:26,005 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 17:09:26,007 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:09:26,008 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 17:09:26,008 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:09:26,008 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:09:26,008 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:09:26,008 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:16:10,581 | Hybrid | INFO | Logger is initialized!
+2019-08-23 17:16:10,581 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 17:16:59,028 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 17:16:59,115 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 17:16:59,115 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:16:59,117 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 17:16:59,503 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 17:16:59,504 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:16:59,504 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:16:59,505 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:16:59,509 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:16:59,509 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:17:08,542 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 17:17:08,600 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 17:17:08,600 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:17:08,604 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 17:17:09,975 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 17:17:09,976 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:17:09,976 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 17:17:09,976 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:17:09,976 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:17:09,976 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:17:18,266 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 17:17:18,318 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 17:17:18,320 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:17:18,324 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 17:17:19,409 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 17:17:19,410 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:17:19,411 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 17:17:19,411 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:17:19,411 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:17:19,411 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:17:28,137 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 17:17:28,193 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 17:17:28,195 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:17:28,196 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 17:17:29,469 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 17:17:29,471 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:17:29,472 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 17:17:29,472 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:17:29,472 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:17:29,472 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:17:37,625 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 17:17:37,685 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 17:17:37,692 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:17:37,694 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 17:17:40,115 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 17:17:40,115 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:17:40,117 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 17:17:40,117 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:17:40,118 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:17:40,118 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:17:40,118 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:17:49,126 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 17:17:49,188 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 17:17:49,189 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:17:49,191 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 17:17:52,123 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 17:17:52,124 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:17:52,125 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 17:17:52,126 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:17:52,126 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:17:52,126 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:17:52,126 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:18:00,793 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 17:18:00,892 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 17:18:00,892 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:18:00,894 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 17:18:03,719 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 17:18:03,721 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:18:03,721 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 17:18:03,721 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:18:03,721 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:03,721 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:18:03,721 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:18:12,923 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 17:18:12,966 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 17:18:12,969 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:18:12,970 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 17:18:14,244 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 17:18:14,244 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:18:14,246 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 17:18:14,246 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:18:14,246 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:14,247 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:18:22,820 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 17:18:22,883 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 17:18:22,897 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:18:22,909 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 17:18:23,640 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 17:18:23,641 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:18:23,642 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 17:18:23,642 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:18:23,642 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:23,642 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:18:32,982 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 17:18:33,046 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 17:18:33,047 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:18:33,049 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 17:18:33,522 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 17:18:33,523 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:18:33,524 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:18:33,524 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:18:33,524 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:33,524 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:18:43,715 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 17:18:43,786 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 17:18:43,787 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:18:43,788 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 17:18:44,207 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 17:18:44,211 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:18:44,211 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:18:44,212 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:18:44,212 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:44,212 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:18:54,189 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 17:18:54,230 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 17:18:54,230 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:18:54,231 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 17:18:54,670 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 17:18:54,675 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:18:54,676 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 17:18:54,676 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:18:54,676 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:18:54,676 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:35:46,448 | Hybrid | INFO | Logger is initialized!
+2019-08-23 17:35:46,449 | Hybrid | INFO | Number of subregions: 540
+Frame rate: 25 Hz
+Freq. bin: 5.859375 BPM
+Window length: 10.24 sec
+2019-08-23 17:36:34,391 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  87.890625 52.734375 46.875    99.609375] BPM
+2019-08-23 17:36:34,467 | Hybrid | INFO | The max SNR value: 68.2905183926337 dB
+2019-08-23 17:36:34,467 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:36:34,468 | Hybrid | INFO | Calculate similarity matrix for 59 selected sub-regions...
+2019-08-23 17:36:35,077 | Hybrid | INFO | Average SNR on segmented skin region: 0.7486875604157723 [dB]
+2019-08-23 17:36:35,077 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:36:35,077 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:36:35,078 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:36:35,078 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:36:35,079 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:36:43,959 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  46.875    87.890625 46.875    93.75    ] BPM
+2019-08-23 17:36:44,009 | Hybrid | INFO | The max SNR value: 111.07024764767556 dB
+2019-08-23 17:36:44,009 | Hybrid | INFO | Pulse rate is estimated to be: 93.75 BPM
+2019-08-23 17:36:44,011 | Hybrid | INFO | Calculate similarity matrix for 105 selected sub-regions...
+2019-08-23 17:36:45,488 | Hybrid | INFO | Average SNR on segmented skin region: 3.075946225725262 [dB]
+2019-08-23 17:36:45,488 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:36:45,488 | Hybrid | INFO | Number of region in largest cluster: 23
+2019-08-23 17:36:45,488 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:36:45,488 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:36:45,488 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:36:53,888 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    87.890625 82.03125  46.875   ] BPM
+2019-08-23 17:36:53,935 | Hybrid | INFO | The max SNR value: 57.02205555886107 dB
+2019-08-23 17:36:53,936 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:36:53,938 | Hybrid | INFO | Calculate similarity matrix for 93 selected sub-regions...
+2019-08-23 17:36:54,971 | Hybrid | INFO | Average SNR on segmented skin region: 2.9037514366512664 [dB]
+2019-08-23 17:36:54,971 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:36:54,972 | Hybrid | INFO | Number of region in largest cluster: 37
+2019-08-23 17:36:54,973 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:36:54,973 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:36:54,973 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:37:03,564 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    41.015625] BPM
+2019-08-23 17:37:03,613 | Hybrid | INFO | The max SNR value: 67.61684107377127 dB
+2019-08-23 17:37:03,613 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:37:03,615 | Hybrid | INFO | Calculate similarity matrix for 104 selected sub-regions...
+2019-08-23 17:37:05,007 | Hybrid | INFO | Average SNR on segmented skin region: 3.296477351700726 [dB]
+2019-08-23 17:37:05,007 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:37:05,008 | Hybrid | INFO | Number of region in largest cluster: 45
+2019-08-23 17:37:05,009 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:37:05,009 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:05,009 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:37:13,061 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 87.890625 41.015625] BPM
+2019-08-23 17:37:13,112 | Hybrid | INFO | The max SNR value: 76.22636656102549 dB
+2019-08-23 17:37:13,116 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:37:13,118 | Hybrid | INFO | Calculate similarity matrix for 137 selected sub-regions...
+2019-08-23 17:37:15,625 | Hybrid | INFO | Average SNR on segmented skin region: 5.889685117021238 [dB]
+2019-08-23 17:37:15,627 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:37:15,627 | Hybrid | INFO | Number of region in largest cluster: 70
+2019-08-23 17:37:15,627 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:37:15,627 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:15,628 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:37:15,628 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:37:23,745 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  46.875    41.015625] BPM
+2019-08-23 17:37:23,790 | Hybrid | INFO | The max SNR value: 110.19111014361586 dB
+2019-08-23 17:37:23,790 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:37:23,791 | Hybrid | INFO | Calculate similarity matrix for 171 selected sub-regions...
+2019-08-23 17:37:27,398 | Hybrid | INFO | Average SNR on segmented skin region: 9.456874630674937 [dB]
+2019-08-23 17:37:27,399 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:37:27,399 | Hybrid | INFO | Number of region in largest cluster: 97
+2019-08-23 17:37:27,399 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:37:27,399 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:27,399 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:37:27,399 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:37:36,442 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 82.03125  58.59375  46.875   ] BPM
+2019-08-23 17:37:36,488 | Hybrid | INFO | The max SNR value: 83.4441765849277 dB
+2019-08-23 17:37:36,488 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:37:36,491 | Hybrid | INFO | Calculate similarity matrix for 168 selected sub-regions...
+2019-08-23 17:37:39,744 | Hybrid | INFO | Average SNR on segmented skin region: 8.483913995394621 [dB]
+2019-08-23 17:37:39,744 | Hybrid | INFO | SNR criteria fulfilled? -> True
+
+2019-08-23 17:37:39,744 | Hybrid | INFO | Number of region in largest cluster: 117
+2019-08-23 17:37:39,745 | Hybrid | INFO | Cluster size criteria fulfilled? -> True
+
+2019-08-23 17:37:39,746 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:39,746 | Hybrid | INFO | ALL criteria fulfilled? -> True
+
+2019-08-23 17:37:39,746 | Hybrid | INFO | ALL criteria met now INITIALIZE TRACKER!
+2019-08-23 17:37:48,312 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  64.453125 41.015625 64.453125 58.59375 ] BPM
+2019-08-23 17:37:48,366 | Hybrid | INFO | The max SNR value: 21.794238747148 dB
+2019-08-23 17:37:48,367 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:37:48,373 | Hybrid | INFO | Calculate similarity matrix for 112 selected sub-regions...
+2019-08-23 17:37:49,838 | Hybrid | INFO | Average SNR on segmented skin region: 1.1408584950465663 [dB]
+2019-08-23 17:37:49,841 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:37:49,841 | Hybrid | INFO | Number of region in largest cluster: 3
+2019-08-23 17:37:49,842 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:37:49,842 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:49,842 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:37:58,666 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [82.03125  52.734375 41.015625 76.171875 58.59375 ] BPM
+2019-08-23 17:37:58,721 | Hybrid | INFO | The max SNR value: 10.0033260879122 dB
+2019-08-23 17:37:58,722 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:37:58,727 | Hybrid | INFO | Calculate similarity matrix for 82 selected sub-regions...
+2019-08-23 17:37:59,603 | Hybrid | INFO | Average SNR on segmented skin region: 1.2684779700085178 [dB]
+2019-08-23 17:37:59,603 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:37:59,604 | Hybrid | INFO | Number of region in largest cluster: 22
+2019-08-23 17:37:59,605 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:37:59,605 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:37:59,606 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:38:08,607 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [87.890625 46.875    41.015625 46.875    58.59375 ] BPM
+2019-08-23 17:38:08,657 | Hybrid | INFO | The max SNR value: 13.346232307943753 dB
+2019-08-23 17:38:08,657 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:38:08,659 | Hybrid | INFO | Calculate similarity matrix for 66 selected sub-regions...
+2019-08-23 17:38:09,159 | Hybrid | INFO | Average SNR on segmented skin region: 0.7314150589108771 [dB]
+2019-08-23 17:38:09,162 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:38:09,162 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:38:09,164 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:38:09,165 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:38:09,165 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:38:18,715 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [41.015625 46.875    52.734375 46.875    58.59375 ] BPM
+2019-08-23 17:38:18,787 | Hybrid | INFO | The max SNR value: 14.223637276026233 dB
+2019-08-23 17:38:18,791 | Hybrid | INFO | Pulse rate is estimated to be: 87.890625 BPM
+2019-08-23 17:38:18,793 | Hybrid | INFO | Calculate similarity matrix for 64 selected sub-regions...
+2019-08-23 17:38:19,251 | Hybrid | INFO | Average SNR on segmented skin region: 0.4031681444535715 [dB]
+2019-08-23 17:38:19,253 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:38:19,254 | Hybrid | INFO | Number of region in largest cluster: 1
+2019-08-23 17:38:19,254 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:38:19,254 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:38:19,254 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
+2019-08-23 17:38:29,069 | Hybrid | INFO | The spectrum peaks of the main 5 principal components in order: [76.171875 52.734375 87.890625 46.875    46.875   ] BPM
+2019-08-23 17:38:29,130 | Hybrid | INFO | The max SNR value: 10.762732668734749 dB
+2019-08-23 17:38:29,134 | Hybrid | INFO | Pulse rate is estimated to be: 82.03125 BPM
+2019-08-23 17:38:29,137 | Hybrid | INFO | Calculate similarity matrix for 65 selected sub-regions...
+2019-08-23 17:38:29,724 | Hybrid | INFO | Average SNR on segmented skin region: 1.0028193664203142 [dB]
+2019-08-23 17:38:29,725 | Hybrid | INFO | SNR criteria fulfilled? -> False
+
+2019-08-23 17:38:29,725 | Hybrid | INFO | Number of region in largest cluster: 2
+2019-08-23 17:38:29,725 | Hybrid | INFO | Cluster size criteria fulfilled? -> False
+
+2019-08-23 17:38:29,725 | Hybrid | INFO | Cluster sparsity criteria fulfilled? -> True
+
+2019-08-23 17:38:29,725 | Hybrid | INFO | ALL criteria fulfilled? -> False
+
